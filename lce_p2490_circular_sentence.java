@@ -15,14 +15,14 @@
 
   Given a string sentence, return true if it is circular. Otherwise, return false.
 
-  Topics: 
-  - String
-
   Constraints:
   - 1 <= sentence.length <= 500
   - sentence consist of only lowercase and uppercase English letters and spaces.
   - The words in sentence are separated by a single space.
   - There are no leading or trailing spaces.
+
+  Topics: 
+  - String
 */
 
 class Solution {

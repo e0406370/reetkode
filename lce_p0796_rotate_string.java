@@ -6,13 +6,13 @@
   A shift on s consists of moving the leftmost character of s to the rightmost position.
   - For example, if s = "abcde", then it will be "bcdea" after one shift.
 
-  Topics: 
-  - String
-  - String Matching
-
   Constraints:
   - 1 <= s.length, goal.length <= 100
   - s and goal consist of lowercase English letters.
+
+  Topics: 
+  - String
+  - String Matching
 */
 
 class Solution {
