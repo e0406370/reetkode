@@ -24,18 +24,14 @@
 */
 
 class Solution {
-
-  // if all letters in word are distinct
-  // Time Complexity: O(n) - 0 ms -> 100.00%
-  // Space Complexity: O(1) - 41.57 MB -> 85.98%
   public int minimumPushes(String word) {
-    
+
     int n = word.length();
 
     int keys = 8;
     int pushCtr = 1;
     int pushSum = 0;
-    
+
     for (int i = 0; i < n; i++) {
       pushSum += pushCtr;
       keys--;
@@ -49,38 +45,7 @@ class Solution {
 
     return pushSum;
   }
-
-  // if letters in word can be non-distinct
-  // Time Complexity: O(n) - 1 ms -> 30.88%
-  // Space Complexity: O(1) - 41.64 MB -> 75.91%
-  public int minimumPushesAlt(String word) {
-    
-    int n = word.length();
-
-    int[] charPushArr = new int[26];
-    int keys = 8;
-    int pushCtr = 1;
-    int pushSum = 0;
-    
-    for (int i = 0; i < n; i++) {
-      int idx = word.charAt(i) - 'a';
-
-      // current letter is not mapped to any key
-      if (charPushArr[idx] == 0) {
-        charPushArr[idx] = pushCtr;
-        keys--;
-      }
-
-      pushSum += charPushArr[idx];
-
-      // all keys have been used for the current push counter
-      if (keys == 0) {
-        pushCtr++;
-        keys = 8;
-      }
-    }
-
-    return pushSum;
-  }
 }
 
+// Time Complexity: O(n) - 0 ms -> 100.00%
+// Space Complexity: O(1) - 41.57 MB -> 85.98%
