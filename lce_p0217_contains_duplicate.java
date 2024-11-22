@@ -20,7 +20,7 @@ import java.util.HashSet;
 class Solution {
 
   // Time Complexity: O(n) - 10 ms -> 89.14%
-  // Space Complexity: O(n) - 57.70 MB -> 65.77%
+  // Space Complexity: O(n) - 57.7 MB -> 65.77%
   public boolean containsDuplicate(int[] nums) {
 
     HashSet<Integer> seen = new HashSet<>();
@@ -37,7 +37,7 @@ class Solution {
   }
 
   // Time Complexity: O(n) - 30 ms -> 5.04%
-  // Space Complexity: O(n) - 57.70 MB -> 69.61%
+  // Space Complexity: O(n) - 57.7 MB -> 69.61%
   public boolean containsDuplicateAlt1(int[] nums) {
 
     HashMap<Integer, Integer> freqMap = new HashMap<>();
@@ -80,7 +80,7 @@ class Solution {
   }
 
   // Time Complexity: O(n log n) - 21 ms -> 9.55%
-  // Space Complexity: O(1) - 55.70 MB 0> 74.54%
+  // Space Complexity: O(1) - 55.7 MB 0> 74.54%
   public boolean containsDuplicateAlt3(int[] nums) {
 
     Arrays.sort(nums);
@@ -93,12 +93,36 @@ class Solution {
 
     return false;
   }
+
+  // Time Complexity: O(n^2) - TLE
+  // Space Complexity: O(1) - TLE
+  public boolean containsDuplicateAlt4(int[] nums) {
+
+    for (int i = 0; i < nums.length; i++) {
+      for (int j = i + 1; j < nums.length; j++) {
+        if (nums[i] == nums[j]) {
+          return true;
+        }
+      }
+    }
+
+    return false;
+  }
+
+  // Time Complexity: O(n) - 24 ms -> 5.41%
+  // Space Complexity: O(n) - 58.5 MB -> 27.31%
+  public boolean containsDuplicateAlt5(int[] nums) {
+
+    return Arrays.stream(nums).distinct().count() < nums.length;
+  }
 }
 
 /*
   methods:
-  ***1. hash set
+  1. hash set (recommended)
   2. hash map (overkill due to extra overhead)
-  3. frequency array (only works if constraints on nums[i] are minimal)
+  3. frequency array (MLE, only works if constraints on nums[i] are minimal)
   4. sorting (not recommended due to O(n log n) runtime)
+  5. brute force (TLE, only works if constraints on nums.length are minimal)
+  6. streaming (compare hash set length and nums.length)
 */
