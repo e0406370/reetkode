@@ -124,5 +124,5 @@ class Solution {
   3. frequency array (MLE, only works if constraints on nums[i] are minimal)
   4. sorting (not recommended due to O(n log n) runtime)
   5. brute force (TLE, only works if constraints on nums.length are minimal)
-  6. streaming (compare hash set length and nums.length)
+  6. streams (compares hash set length and nums.length)
 */
