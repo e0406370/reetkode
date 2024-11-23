@@ -16,9 +16,6 @@ import java.util.List;
 class Solution {
 
   //#region Method 1
-  // Time Complexity: O(L)
-  // Space Complexity: O(L + n)
-  // L = total no. of characters across all strings, n = no. of strings
   public static String encode(List<String> strs) {
     StringBuilder sb = new StringBuilder();
 
@@ -53,6 +50,43 @@ class Solution {
       else {
         temp.append(ch);
       }
+    }
+
+    return strs;
+  }
+  //#endregion
+
+  //#region Method 2
+  public static String encodeAlt(List<String> strs) {
+    StringBuilder sb = new StringBuilder();
+
+    for (String str : strs) {
+      sb.append(str.length());
+      sb.append("#");
+      sb.append(str);
+    }
+
+    return sb.toString();
+  }
+
+  public static List<String> decodeAlt(String str) {
+    List<String> strs = new ArrayList<>();
+
+    int i = 0;
+    while (i < str.length()) {
+      int j = i;
+
+      while (str.charAt(j) != '#') {
+        j++;
+      }
+
+      int length = Integer.parseInt(str.substring(i, j));
+
+      i = j + 1;
+      j = i + length;
+      strs.add(str.substring(i, j));
+
+      i = j;
     }
 
     return strs;
