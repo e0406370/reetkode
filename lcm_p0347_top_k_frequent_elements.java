@@ -52,6 +52,7 @@ class Solution {
 
   // Time Complexity: O(n) - 12 ms -> 82.75%
   // Space Complexity: O(n) - 50.15 MB -> 5.35%
+  @SuppressWarnings("unchecked")
   public int[] topKFrequentAlt(int[] nums, int k) {
 
     int n = nums.length;
