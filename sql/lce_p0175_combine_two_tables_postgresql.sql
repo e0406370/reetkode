@@ -1,6 +1,6 @@
 /*
   LCE 175. Combine Two Tables
-  -> PostgresSQL
+  -> PostgreSQL
 
   Table: Person
 
@@ -34,6 +34,14 @@
   Return the result table in any order.
 */
 
+-- Method 1: ON clause -> displays both columns
 SELECT P.firstName, P.lastName, A.city, A.state
-FROM Person P
-LEFT JOIN Address A ON P.personId = A.personId
+FROM Person P LEFT JOIN Address A 
+ON P.personId = A.personId
+
+-- Method 2: USING clause -> suppresses redundant columns
+SELECT P.firstName, P.lastName, A.city, A.state
+FROM Person P LEFT JOIN Address A 
+USING(personId)
+
+-- related: https://www.postgresql.org/docs/17/queries-table-expressions.html
