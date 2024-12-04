@@ -1,6 +1,6 @@
 /*
   LCE 182. Duplicate Emails
-  -> MySQL
+  -> PostgreSQL
 
   Table: Person
 
@@ -24,4 +24,6 @@ GROUP BY email
 HAVING COUNT(email) > 1
 
 -- HAVING selects group rows after groups and aggregates are computed
--- related: https://www.postgresql.org/docs/current/tutorial-agg.html
+
+-- reference: 
+  -- https://www.postgresql.org/docs/current/tutorial-agg.html

@@ -33,4 +33,6 @@ ON E1.managerId = E2.id
 WHERE E1.salary > E2.salary
 
 -- E1 refers to Employees, E2 refers to Managers
--- related: https://www.postgresql.org/docs/17/queries-table-expressions.html
+
+-- reference: 
+  -- https://www.postgresql.org/docs/17/queries-table-expressions.html

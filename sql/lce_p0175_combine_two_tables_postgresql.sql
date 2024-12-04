@@ -44,4 +44,5 @@ SELECT P.firstName, P.lastName, A.city, A.state
 FROM Person P LEFT JOIN Address A 
 USING(personId)
 
--- related: https://www.postgresql.org/docs/17/queries-table-expressions.html
+-- reference: 
+  -- https://www.postgresql.org/docs/17/queries-table-expressions.html

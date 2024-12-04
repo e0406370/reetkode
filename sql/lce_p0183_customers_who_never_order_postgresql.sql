@@ -1,6 +1,6 @@
 /*
   LCE 183. Customers Who Never Order
-  -> MySQL
+  -> PostgreSQL
 
   Table: Customers
 
@@ -38,4 +38,5 @@ WHERE id NOT IN (
     FROM Orders
 )
 
--- reference: https://www.postgresql.org/docs/17/functions-subquery.html#FUNCTIONS-SUBQUERY-NOTIN
+-- reference: 
+  -- https://www.postgresql.org/docs/17/functions-subquery.html#FUNCTIONS-SUBQUERY-NOTIN
