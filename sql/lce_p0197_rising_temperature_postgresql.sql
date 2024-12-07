@@ -33,4 +33,4 @@ WHERE W1.recordDate = W2.recordDate + 1
 AND W1.temperature > W2.temperature
 
 -- reference: 
-  -- https://www.postgresql.org/docs/17/queries-table-expressions.html#:~:text=The%20join%20condition%20specified%20with%20ON%20can%20also%20contain%20conditions%20that%20do%20not%20relate%20directly%20to%20the%20join
+  -- M1: https://www.postgresql.org/docs/17/queries-table-expressions.html#:~:text=The%20join%20condition%20specified%20with%20ON%20can%20also%20contain%20conditions%20that%20do%20not%20relate%20directly%20to%20the%20join

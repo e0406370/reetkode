@@ -45,4 +45,4 @@ FROM Person P LEFT JOIN Address A
 USING(personId)
 
 -- reference: 
-  -- https://www.postgresql.org/docs/17/queries-table-expressions.html
+  -- M1, M2: https://www.postgresql.org/docs/17/queries-table-expressions.html

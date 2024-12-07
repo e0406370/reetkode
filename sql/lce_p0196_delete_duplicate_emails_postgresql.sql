@@ -23,32 +23,32 @@
   The final order of the Person table does not matter.
 */
 
--- Method 1: subquery using RANK()
+-- Method 1: subquery using RANK() window function
 DELETE FROM 
-  Person
+    Person
 USING (
-  SELECT id, RANK() OVER (PARTITION BY email ORDER BY id ASC) AS rank
-  FROM Person
+    SELECT id, RANK() OVER (PARTITION BY email ORDER BY id ASC) AS rank
+    FROM Person
 ) R
 WHERE 
-  Person.id = R.id 
+    Person.id = R.id 
 AND 
-  R.rank > 1;
+    R.rank > 1;
 
 -- Method 2: querying same table twice -> Cartesian Product
 DELETE FROM 
-  Person P1
+    Person P1
 USING 
-  Person P2
+    Person P2
 WHERE
-  P1.email = P2.email
+    P1.email = P2.email
 AND
-  P1.id > P2.id
+    P1.id > P2.id
 
 -- M1 is faster than M2
   -- subquery R in M1 computes ranks in a single scan then joins with the main table Person
   -- nested iterations in M2 involves iterating through all rows in P2 for each row in P1
 
 -- reference: 
-  -- https://www.postgresql.org/docs/17/sql-delete.html
-  -- https://www.postgresql.org/docs/17/tutorial-window.html
+  -- M1, M2: https://www.postgresql.org/docs/17/sql-delete.html
+  -- M1: https://www.postgresql.org/docs/17/tutorial-window.html

@@ -35,4 +35,4 @@ WHERE E1.salary > E2.salary
 -- E1 refers to Employees, E2 refers to Managers
 
 -- reference: 
-  -- https://www.postgresql.org/docs/17/queries-table-expressions.html
+  -- M1, M2: https://www.postgresql.org/docs/17/queries-table-expressions.html

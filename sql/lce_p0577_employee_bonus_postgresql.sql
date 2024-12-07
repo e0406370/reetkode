@@ -36,7 +36,7 @@
 SELECT E.name, B.bonus
 FROM Employee E LEFT JOIN Bonus B
 ON E.empId = B.empId
-WHERE B.bonus IS NULL OR B.bonus < 1000
+WHERE B.bonus IS null OR B.bonus < 1000
 
 -- reference:
   -- https://www.postgresql.org/docs/17/functions-comparison.html

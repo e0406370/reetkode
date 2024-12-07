@@ -23,7 +23,7 @@ FROM Person
 GROUP BY email
 HAVING COUNT(email) > 1
 
--- HAVING selects group rows after groups and aggregates are computed
+-- HAVING selects group rows AFTER groups and aggregates are computed
 
 -- reference: 
   -- https://www.postgresql.org/docs/current/tutorial-agg.html

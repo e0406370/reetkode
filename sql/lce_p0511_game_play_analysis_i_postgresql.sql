@@ -26,17 +26,17 @@ SELECT player_id, MIN(event_date) AS first_login
 FROM Activity
 GROUP BY player_id
 
--- Method 2: CTE with rank()
+-- Method 2: CTE with RANK() window function
 WITH R AS (
     SELECT player_id, event_date, RANK() OVER (PARTITION BY player_id ORDER BY event_date ASC) AS rank
     FROM Activity
 )
-
 SELECT player_id, event_date AS first_login
 FROM R
 WHERE R.rank = 1
 
 -- reference: 
-  -- https://www.postgresql.org/docs/current/tutorial-agg.html
-  -- https://www.postgresql.org/docs/17/functions-aggregate.html
-  -- https://www.postgresql.org/docs/current/queries-with.html
+  -- M1: https://www.postgresql.org/docs/current/tutorial-agg.html
+  -- M1: https://www.postgresql.org/docs/17/functions-aggregate.html
+  -- M2: https://www.postgresql.org/docs/current/queries-with.html
+  -- M2: https://www.postgresql.org/docs/17/tutorial-window.html
