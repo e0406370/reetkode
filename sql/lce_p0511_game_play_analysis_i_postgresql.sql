@@ -21,14 +21,14 @@
   Return the result table in any order.
 */
 
--- Method 1: using GROUP BY and MIN
-SELECT player_id, MIN(event_date) AS first_login
+-- Method 1: using GROUP BY and min()
+SELECT player_id, min(event_date) AS first_login
 FROM Activity
 GROUP BY player_id
 
--- Method 2: CTE with RANK() window function
+-- Method 2: CTE with rank() window function
 WITH R AS (
-    SELECT player_id, event_date, RANK() OVER (PARTITION BY player_id ORDER BY event_date ASC) AS rank
+    SELECT player_id, event_date, rank() OVER (PARTITION BY player_id ORDER BY event_date ASC) AS rank
     FROM Activity
 )
 SELECT player_id, event_date AS first_login

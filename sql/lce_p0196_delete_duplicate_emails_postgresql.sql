@@ -23,11 +23,11 @@
   The final order of the Person table does not matter.
 */
 
--- Method 1: subquery using RANK() window function
+-- Method 1: subquery using rank() window function
 DELETE FROM 
     Person
 USING (
-    SELECT id, RANK() OVER (PARTITION BY email ORDER BY id ASC) AS rank
+    SELECT id, rank() OVER (PARTITION BY email ORDER BY id ASC) AS rank
     FROM Person
 ) R
 WHERE 

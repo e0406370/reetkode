@@ -22,12 +22,12 @@
 SELECT class
 FROM Courses
 GROUP BY class
-HAVING COUNT(*) >= 5
+HAVING count(*) >= 5
 
 -- Method 2: using subquery
 SELECT class
 FROM (
-    SELECT class, COUNT(*) AS count
+    SELECT class, count(*) AS count
     FROM Courses
     GROUP BY class
 )

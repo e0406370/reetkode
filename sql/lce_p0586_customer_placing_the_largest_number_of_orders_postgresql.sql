@@ -22,17 +22,17 @@
 SELECT customer_number
 FROM Orders
 GROUP BY customer_number
-ORDER BY COUNT(order_number) DESC
+ORDER BY count(order_number) DESC
 LIMIT 1
 
 -- Method 2: using nested subqueries
 SELECT customer_number
 FROM Orders
 GROUP BY customer_number
-HAVING COUNT(*) = (
-    SELECT MAX(count)
+HAVING count(*) = (
+    SELECT max(count)
     FROM (
-        SELECT COUNT(*) AS count
+        SELECT count(*) AS count
         FROM Orders
         GROUP BY customer_number
     )

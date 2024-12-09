@@ -25,24 +25,24 @@
 SELECT player_id, device_id
 FROM Activity
 WHERE (player_id, event_date) IN (
-    SELECT player_id, MIN(event_date)
+    SELECT player_id, min(event_date)
     FROM Activity
     GROUP BY player_id
 )
 
--- Method 2: CTE with RANK() window funciton
+-- Method 2: CTE with rank() window funciton
 WITH R AS (
-    SELECT player_id, device_id, RANK() OVER (PARTITION BY player_id ORDER BY event_date ASC) AS rank
+    SELECT player_id, device_id, rank() OVER (PARTITION BY player_id ORDER BY event_date ASC) AS rank
     FROM Activity
 )
 SELECT player_id, device_id
 FROM R
 WHERE R.rank = 1
 
--- Method 3: using FIRST_VALUE() window function
+-- Method 3: using first_value() window function
 SELECT 
     DISTINCT player_id, 
-    FIRST_VALUE(device_id) OVER (PARTITION BY player_id ORDER BY event_date) AS device_id
+    first_value(device_id) OVER (PARTITION BY player_id ORDER BY event_date) AS device_id
 FROM Activity
 
 -- reference:

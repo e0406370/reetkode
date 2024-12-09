@@ -21,7 +21,7 @@
 SELECT email AS EMAIL
 FROM Person
 GROUP BY email
-HAVING COUNT(email) > 1
+HAVING count(email) > 1
 
 -- HAVING selects group rows AFTER groups and aggregates are computed
 
