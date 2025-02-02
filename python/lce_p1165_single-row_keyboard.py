@@ -23,6 +23,9 @@
 
 
 class Solution:
+
+    # Time Complexity: O(n) - 12 ms -> 15.41%
+    # Space Complexity: O(1) - 17.85 MB -> 35.41%
     def calculateTime(self, keyboard: str, word: str) -> int:
         curr_idx = 0
         time_taken = 0
@@ -34,6 +37,8 @@ class Solution:
 
         return time_taken
 
+    # Time Complexity: O(n) - 3 ms -> 98.92%
+    # Space Complexity: O(n) - 17.86 MB -> 35.41%
     def calculateTimeAlt(self, keyboard: str, word: str) -> int:
         curr_idx = 0
         time_taken = 0
@@ -46,3 +51,10 @@ class Solution:
             curr_idx = next_idx
 
         return time_taken
+
+
+"""
+  methods:
+  1. find() to scan keyboard string from left to right => O(n * 26) = O(26n) time complexity, O(1) space complexity
+  2. instant dictionary lookup => O(n * 1) = O(n) time complexity, O(n) space complexity
+"""

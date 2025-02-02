@@ -22,14 +22,18 @@ class Solution:
 
         return True
 
+    # Time Complexity: O(n) - 2 ms -> 27.51%
+    # Space Complexity: O(1) - 17.89 MB -> 23.25%
     def isParityEqual(self, num1: int, num2: int) -> bool:
         return (num1 & 1) ^ (num2 & 1) == 0
 
+    # Time Complexity: O(n) - 2 ms -> 27.51%
+    # Space Complexity: O(1) - 17.89 MB -> 23.25%
     def isParityEqualAlt(self, num1: int, num2: int) -> bool:
         return num1 % 2 == num2 % 2
 
 
-# reference for isParityEqual
+# reference for method 1 - isParityEqual (bitwise operations)
 # +---+---+-----+-----+
 # | A | B | A&B | A^B |
 # +---+---+-----+-----+
@@ -39,7 +43,7 @@ class Solution:
 # | 1 | 0 |  0  |  1  |
 # +---+---+-----+-----+
 
-# reference for isParityEqualAlt
+# reference for method 2 - isParityEqualAlt (modulo comparisons)
 # +-------+-------+-----+
 # |   A   |   B   | T/F |
 # +-------+-------+-----+

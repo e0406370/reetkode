@@ -22,3 +22,7 @@ class Solution:
             score += abs(ord(s[i]) - ord(s[i + 1]))
 
         return score
+
+
+# Time Complexity: O(n) - 0 ms -> 100.00%
+# Space Complexity: O(1) - 17.85 MB -> 24.26%
