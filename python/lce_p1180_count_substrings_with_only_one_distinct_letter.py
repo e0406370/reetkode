@@ -14,6 +14,9 @@
 
 
 class Solution:
+
+    # Time Complexity: O(n) - 0 ms -> 100.00%
+    # Space Complexity: O(1) - 17.67 MB -> 70.53%
     def countLetters(self, s: str) -> int:
         n = len(s)
         ptr_start = 0
@@ -35,6 +38,26 @@ class Solution:
     def getNumOfSubstrings(self, n: int) -> int:
         return n * (n + 1) // 2
 
+    # Time Complexity: O(n) - 0 ms -> 100.00%
+    # Space Complexity: O(1) - 17.58 MB -> 89.01%
+    def countLettersAlt(self, s: str) -> int:
+        n = len(s)
+        total = 1
+        curr = 1
 
-# Time Complexity: O(n) - 0 ms -> 100.00%
-# Space Complexity: O(1) - 17.67 MB -> 70.53%
+        for i in range(1, n):
+            if s[i] == s[i - 1]:
+                curr += 1
+            else:
+                curr = 1
+
+            total += curr
+
+        return total
+
+
+"""
+  methods:
+  1. two pointers + arithmetic sequence
+  2. dynamic programming
+"""
