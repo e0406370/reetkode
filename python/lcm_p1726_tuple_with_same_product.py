@@ -1,5 +1,5 @@
 """
-  LCE 1726. Tuple with Same Product
+  LCM 1726. Tuple with Same Product
 
   Given an array nums of distinct positive integers, return the number of tuples (a, b, c, d)
   such that a * b = c * d where a, b, c, and d are elements of nums, and a != b != c != d.  
@@ -38,5 +38,15 @@ class Solution:
         return count
 
 
-# Time Complexity: O(n^2) - 3298 ms -> 93.84%
+# Time Complexity: O(n^2) - 298 ms -> 93.84%
 # Space Complexity: O(n^2) - 46.41 MB -> 41.71%
+
+
+"""
+    nC2 => choose 2 pairs out of n possible pairs that have the same product
+    2 => swap positions of pair 1 and pair 2
+    2 => swap positions within pair 1
+    2 => swap positions within pair 2
+    
+    ∴ for each product => count = nC2 * (2 * 2 * 2) = nC2 * 8
+"""

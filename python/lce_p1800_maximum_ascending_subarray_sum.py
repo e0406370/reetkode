@@ -9,8 +9,8 @@
   Note that a subarray of size 1 is ascending.
 
   Constraints:
-  - 1 <= nums.length <= 50
-  - 1 <= nums[i] <= 50
+  - 1 <= nums.length <= 100
+  - 1 <= nums[i] <= 100
 
   Topics:
   - Array
@@ -30,9 +30,8 @@ class Solution:
             else:
                 curr_sum += nums[i]
 
-        max_sum = max(curr_sum, max_sum)
-        return max_sum
+        return max(curr_sum, max_sum)
 
 
 # Time Complexity: O(n) - 0 ms -> 100.00%
-# Space Complexity: O(1) - 17.77 MB -> 44.25%
+# Space Complexity: O(1) - 17.66 MB -> 79.11%
