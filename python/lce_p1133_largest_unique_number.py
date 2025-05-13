@@ -1,19 +1,17 @@
 """
-  LCE 1133. Largest Unique Number (Premium)
+LCE 1133. Largest Unique Number (Premium)
 
-  Given an integer array nums, return the largest integer that only occurs once. If no integer occurs once, return -1.
+Given an integer array nums, return the largest integer that only occurs once. If no integer occurs once, return -1.
 
-  Constraints:
-  - 1 <= nums.length <= 2000
-  - 0 <= nums[i] <= 1000
+Constraints:
+- 1 <= nums.length <= 2000
+- 0 <= nums[i] <= 1000
 
-  Topics:
-  - Array
-  - Hash Table
-  - Sorting
+Topics:
+- Array
+- Hash Table
+- Sorting
 """
-
-from collections import Counter
 
 
 class Solution:
@@ -58,17 +56,11 @@ class Solution:
 
         while ptr < n:
             # curr is the last element or different from the next element
-            if (
-                ptr == n - 1
-                or nums[ptr] != nums[ptr + 1]
-            ):
+            if ptr == n - 1 or nums[ptr] != nums[ptr + 1]:
                 return nums[ptr]
 
             # skip duplicates
-            while (
-                ptr < n - 1
-                and nums[ptr] == nums[ptr + 1]
-            ):
+            while ptr < n - 1 and nums[ptr] == nums[ptr + 1]:
                 ptr += 1
 
             # move to the next unique number
@@ -81,10 +73,7 @@ class Solution:
     def largestUniqueNumberAlt3(self, nums: List[int]) -> int:
         freq_map = Counter(nums)
 
-        return max(
-            (num for num, freq in freq_map.items() if freq == 1),
-            default=-1
-        )
+        return max((num for num, freq in freq_map.items() if freq == 1), default=-1)
 
 
 """

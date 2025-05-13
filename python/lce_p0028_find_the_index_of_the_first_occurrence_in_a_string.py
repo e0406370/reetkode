@@ -1,21 +1,21 @@
 """
-  LCE 28. Find the Index of the First Occurrence in a String
+LCE 28. Find the Index of the First Occurrence in a String
 
-  Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 
-  Constraints:
-  - 1 <= haystack.length, needle.length <= 10^4
-  - haystack and needle consist of only lowercase English characters.
+Constraints:
+- 1 <= haystack.length, needle.length <= 10^4
+- haystack and needle consist of only lowercase English characters.
 
-  Topics:
-  - Two Pointers
-  - String
-  - String Matching
+Topics:
+- Two Pointers
+- String
+- String Matching
 """
 
 
 class Solution:
-  
+
     # Time Complexity: O(n) - 1 ms -> 100.00%
     # Space Complexity: O(1) - 18.01 MB -> 10.63%
     def strStr(self, haystack: str, needle: str) -> int:

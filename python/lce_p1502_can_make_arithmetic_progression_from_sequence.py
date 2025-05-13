@@ -1,22 +1,22 @@
 """
-  LCE 1502. Can Make Arithmetic Progression From Sequence
+LCE 1502. Can Make Arithmetic Progression From Sequence
 
-  A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same.
+A sequence of numbers is called an arithmetic progression if the difference between any two consecutive elements is the same.
 
-  Given an array of numbers arr, return true if the array can be rearranged to form an arithmetic progression. Otherwise, return false.
+Given an array of numbers arr, return true if the array can be rearranged to form an arithmetic progression. Otherwise, return false.
 
-  Constraints:
-  - 2 <= arr.length <= 1000
-  - 10^6 <= arr[i] <= 10^6
+Constraints:
+- 2 <= arr.length <= 1000
+- 10^6 <= arr[i] <= 10^6
 
-  Topics:
-  - Array
-  - Sorting
+Topics:
+- Array
+- Sorting
 """
 
 
 class Solution:
-  
+
     # Time Complexity: O(n log n) - 0 ms -> 100.00%
     # Space Complexity: O(1) - 17.80 MB -> 84.66%
     def canMakeArithmeticProgression(self, arr: List[int]) -> bool:
@@ -30,7 +30,7 @@ class Solution:
         return True
 
     # Time Complexity: O(n) - 3 ms -> 19.68%
-    # Space Complexity: O(n) - 17.96 MB -> 35.66%  
+    # Space Complexity: O(n) - 17.96 MB -> 35.66%
     def canMakeArithmeticProgression(self, arr: List[int]) -> bool:
         num_set = set(arr)
 
@@ -47,8 +47,8 @@ class Solution:
         if len_set < len_arr:
             return False
 
-        min_num = 10 ** 6
-        max_num = -10 ** 6
+        min_num = 10**6
+        max_num = -(10**6)
         for num in arr:
             min_num = min(num, min_num)
             max_num = max(num, max_num)

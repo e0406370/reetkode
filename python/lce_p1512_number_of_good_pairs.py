@@ -1,22 +1,20 @@
 """
-  LCE 1512. Number of Good Pairs
+LCE 1512. Number of Good Pairs
 
-  Given an array of integers nums, return the number of good pairs.
+Given an array of integers nums, return the number of good pairs.
 
-  A pair (i, j) is called good if nums[i] == nums[j] and i < j.
+A pair (i, j) is called good if nums[i] == nums[j] and i < j.
 
-  Constraints:
-  - 1 <= nums.length <= 100
-  - 1 <= nums[i] <= 100
+Constraints:
+- 1 <= nums.length <= 100
+- 1 <= nums[i] <= 100
 
-  Topics:
-  - Array
-  - Hash Table 
-  - Math
-  - Counting
+Topics:
+- Array
+- Hash Table
+- Math
+- Counting
 """
-
-from collections import Counter
 
 
 class Solution:

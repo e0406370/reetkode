@@ -1,20 +1,20 @@
 """
-  LCM 2393. Count Strictly Increasing Subarrays (Premium)
+LCM 2393. Count Strictly Increasing Subarrays (Premium)
 
-  You are given an array nums consisting of positive integers.
+You are given an array nums consisting of positive integers.
 
-  Return the number of subarrays of nums that are in strictly increasing order.
+Return the number of subarrays of nums that are in strictly increasing order.
 
-  A subarray is a contiguous part of an array.
+A subarray is a contiguous part of an array.
 
-  Constraints:
-  - 1 <= nums.length <= 10^5
-  - 1 <= nums[i] <= 10^6
+Constraints:
+- 1 <= nums.length <= 10^5
+- 1 <= nums[i] <= 10^6
 
-  Topics:
-  - Array
-  - Math
-  - Dynamic Programming
+Topics:
+- Array
+- Math
+- Dynamic Programming
 """
 
 

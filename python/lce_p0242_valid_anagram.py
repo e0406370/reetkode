@@ -1,19 +1,17 @@
 """
-  LCE 242. Valid Anagram
+LCE 242. Valid Anagram
 
-  Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
-  Constraints:
-  - 1 <= s.length, t.length <= 5 * 104
-  - s and t consist of lowercase English letters.
+Constraints:
+- 1 <= s.length, t.length <= 5 * 104
+- s and t consist of lowercase English letters.
 
-  Topics:
-  - Hash Table
-  - String
-  - Sorting
+Topics:
+- Hash Table
+- String
+- Sorting
 """
-
-from collections import Counter, defaultdict
 
 
 class Solution:

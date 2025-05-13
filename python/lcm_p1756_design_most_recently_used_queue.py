@@ -1,24 +1,24 @@
 """
-  LCM 1756. Design Most Recently Used Queue
-  
-  Design a queue-like data structure that moves the most recently used element to the end of the queue.
+LCM 1756. Design Most Recently Used Queue
 
-  Implement the MRUQueue class:
-  - MRUQueue(int n) constructs the MRUQueue with n elements: [1,2,3,...,n].
-  - int fetch(int k) moves the kth element (1-indexed) to the end of the queue and returns it.
-  
-  Constraints:
-  - 1 <= n <= 2000
-  - 1 <= k <= n
-  - At most 2000 calls will be made to fetch.
-  
-  Topics:
-  - Array 
-  - Hash Table 
-  - Stack 
-  - Design 
-  - Binary Indexed Tree #
-  - Ordered Set
+Design a queue-like data structure that moves the most recently used element to the end of the queue.
+
+Implement the MRUQueue class:
+- MRUQueue(int n) constructs the MRUQueue with n elements: [1,2,3,...,n].
+- int fetch(int k) moves the kth element (1-indexed) to the end of the queue and returns it.
+
+Constraints:
+- 1 <= n <= 2000
+- 1 <= k <= n
+- At most 2000 calls will be made to fetch.
+
+Topics:
+- Array
+- Hash Table
+- Stack
+- Design
+- Binary Indexed Tree #
+- Ordered Set
 """
 
 

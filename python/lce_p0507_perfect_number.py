@@ -1,16 +1,16 @@
 """
-  LCE 507. Perfect Number
+LCE 507. Perfect Number
 
-  A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
-  A divisor of an integer x is an integer that can divide x evenly.
+A perfect number is a positive integer that is equal to the sum of its positive divisors, excluding the number itself.
+A divisor of an integer x is an integer that can divide x evenly.
 
-  Given an integer n, return true if n is a perfect number, otherwise return false.
+Given an integer n, return true if n is a perfect number, otherwise return false.
 
-  Constraints:
-  - 1 <= nums <= 10^8
+Constraints:
+- 1 <= nums <= 10^8
 
-  Topics:
-  - Math
+Topics:
+- Math
 """
 
 import math

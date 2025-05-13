@@ -1,23 +1,20 @@
 """
-  LCM 2364. Count Number of Bad Pairs
+LCM 2364. Count Number of Bad Pairs
 
-  You are given a 0-indexed integer array nums. A pair of indices (i, j) is a bad pair if i < j and j - i != nums[j] - nums[i].
+You are given a 0-indexed integer array nums. A pair of indices (i, j) is a bad pair if i < j and j - i != nums[j] - nums[i].
 
-  Return the total number of bad pairs in nums.
+Return the total number of bad pairs in nums.
 
-  Constraints:
-  - 1 <= nums.length <= 10^5
-  - 1 <= nums[i] <= 10^9
+Constraints:
+- 1 <= nums.length <= 10^5
+- 1 <= nums[i] <= 10^9
 
-  Topics:
-  - Array
-  - Hash Table 
-  - Math
-  - Counting
+Topics:
+- Array
+- Hash Table
+- Math
+- Counting
 """
-
-from collections import Counter
-import math
 
 
 class Solution:
