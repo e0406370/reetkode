@@ -1,18 +1,18 @@
 """
-  LCM 1852. Distinct Numbers in Each Subarray (Premium)
+LCM 1852. Distinct Numbers in Each Subarray (Premium)
 
-  Given an integer array nums and an integer k, you are asked to construct the array ans of size n-k+1 where ans[i] is the number of distinct numbers in the subarray nums[i:i+k-1] = [nums[i], nums[i+1], ..., nums[i+k-1]].
+Given an integer array nums and an integer k, you are asked to construct the array ans of size n-k+1 where ans[i] is the number of distinct numbers in the subarray nums[i:i+k-1] = [nums[i], nums[i+1], ..., nums[i+k-1]].
 
-  Return the array ans.
+Return the array ans.
 
-  Constraints:
-  - 1 <= k <= nums.length <= 10^5
-  - 1 <= nums[i] <= 10^5
+Constraints:
+- 1 <= k <= nums.length <= 10^5
+- 1 <= nums[i] <= 10^5
 
-  Topics:
-  - Array
-  - Hash Table
-  - Sliding Window
+Topics:
+- Array
+- Hash Table
+- Sliding Window
 """
 
 

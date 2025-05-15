@@ -1,15 +1,15 @@
 """
-  LCE 3032. Count Numbers With Unique Digits II (Premium)
+LCE 3032. Count Numbers With Unique Digits II (Premium)
 
-  Given two positive integers a and b, return the count of numbers having unique digits in the range [a, b] (inclusive).
+Given two positive integers a and b, return the count of numbers having unique digits in the range [a, b] (inclusive).
 
-  Constraints:
-  - 1 <= a <= b <= 1000
+Constraints:
+- 1 <= a <= b <= 1000
 
-  Topics:
-  - Hash Table
-  - Math
-  - Dynamic Programming
+Topics:
+- Hash Table
+- Math
+- Dynamic Programming
 """
 
 

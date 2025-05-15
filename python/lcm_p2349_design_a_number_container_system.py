@@ -1,27 +1,25 @@
 """
-  LCM 2349. Design a Number Container System
+LCM 2349. Design a Number Container System
 
-  Design a number container system that can do the following:
-  - Insert or Replace a number at the given index in the system.
-  - Return the smallest index for the given number in the system.
-  
-  Implement the NumberContainers class:
-  - NumberContainers() Initializes the number container system.
-  - void change(int index, int number) Fills the container at index with the number. If there is already a number at that index, replace it.
-  - int find(int number) Returns the smallest index for the given number, or -1 if there is no index that is filled by number in the system.
+Design a number container system that can do the following:
+- Insert or Replace a number at the given index in the system.
+- Return the smallest index for the given number in the system.
 
-  Constraints:
-  - 1 <= index, number <= 10^9
-  - At most 10^5 calls will be made in total to change and find.
+Implement the NumberContainers class:
+- NumberContainers() Initializes the number container system.
+- void change(int index, int number) Fills the container at index with the number. If there is already a number at that index, replace it.
+- int find(int number) Returns the smallest index for the given number, or -1 if there is no index that is filled by number in the system.
 
-  Topics:
-  - Hash Table 
-  - Design 
-  - Heap (Priority Queue) 
-  - Ordered Set
+Constraints:
+- 1 <= index, number <= 10^9
+- At most 10^5 calls will be made in total to change and find.
+
+Topics:
+- Hash Table
+- Design
+- Heap (Priority Queue)
+- Ordered Set
 """
-
-import heapq
 
 
 class NumberContainers:
@@ -46,7 +44,7 @@ class NumberContainers:
 
         while self.numbers[number]:
             smallest_index = self.numbers[number][0]
-            
+
             if self.containers.get(smallest_index) == number:
                 return smallest_index
             else:

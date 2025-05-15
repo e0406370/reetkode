@@ -1,14 +1,14 @@
 """
-  LCE 1119. Remove Vowels from a String (Premium)
+LCE 1119. Remove Vowels from a String (Premium)
 
-  Given a string s, remove the vowels 'a', 'e', 'i', 'o', and 'u' from it, and return the new string.
+Given a string s, remove the vowels 'a', 'e', 'i', 'o', and 'u' from it, and return the new string.
 
-  Constraints:
-  - 1 <= s.length <= 1000
-  - s consists only of lowercase English letters.
+Constraints:
+- 1 <= s.length <= 1000
+- s consists only of lowercase English letters.
 
-  Topics:
-  - String
+Topics:
+- String
 """
 
 

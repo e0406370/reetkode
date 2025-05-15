@@ -1,15 +1,15 @@
 """
-  LCE 1180. Count Substrings with Only One Distinct Letter (Premium)
+LCE 1180. Count Substrings with Only One Distinct Letter (Premium)
 
-  Given a string s, return the number of substrings that have only one distinct letter.
+Given a string s, return the number of substrings that have only one distinct letter.
 
-  Constraints:
-  - 1 <= s.length <= 1000
-  - s[i] consists of only lowercase English letters.
+Constraints:
+- 1 <= s.length <= 1000
+- s[i] consists of only lowercase English letters.
 
-  Topics:
-  - Math
-  - String
+Topics:
+- Math
+- String
 """
 
 
