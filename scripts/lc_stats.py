@@ -1,13 +1,14 @@
 from collections import defaultdict
+from tabulate import tabulate
 import pathlib
 
-STATS_KEYS = ["easy", "medium", "hard", "total"]
-EASY, MEDIUM, HARD, TOTAL = STATS_KEYS
+LEVELS = ["easy", "medium", "hard", "total"]
+EASY, MEDIUM, HARD, TOTAL = LEVELS
 
 IGNORED_DIRS = [".git", "scripts"]
 
 
-def stats_leetcode() -> None:
+def stats_leetcode() -> dict:
 
     base_dir = pathlib.Path(__file__).parent.parent.resolve()
     total_stats: dict[str, dict[str, int]] = defaultdict(dict)
@@ -36,17 +37,34 @@ def stats_leetcode() -> None:
             total_stats[language] = stats
 
     total_stats[TOTAL] = {
-        key: sum(stats[key] for stats in total_stats.values())
-        for key in STATS_KEYS
+        level: sum(stats[level] for stats in total_stats.values())
+        for level in LEVELS
     }
+    
+    headers = [""] + list(language.capitalize() for language in total_stats)
+    rows = [
+        [level] + [total_stats[language][level] for language in total_stats]
+        for level in LEVELS
+    ]
+    print(tabulate(tabular_data=rows, headers=headers, tablefmt="grid"))
 
-    for language, stats in total_stats.items():
-        statement = (
-            f"{language.capitalize()}\n"
-            + "\n".join(f"{k}: {v}" for k, v in stats.items())
-        )
-        print(f"\n{statement}\n")
-
+    return dict(total_stats)
 
 if __name__ == "__main__":
     stats_leetcode()
+
+"""
+how the table looks like in CLI:
+
++--------+--------+--------------+----------+-------+---------+
+|        |   Java |   Javascript |   Python |   Sql |   Total |
++========+========+==============+==========+=======+=========+
+| easy   |      0 |            0 |        0 |     0 |       0 |
++--------+--------+--------------+----------+-------+---------+
+| medium |      0 |            0 |        0 |     0 |       0 |
++--------+--------+--------------+----------+-------+---------+
+| hard   |      0 |            0 |        0 |     0 |       0 |
++--------+--------+--------------+----------+-------+---------+
+| total  |      0 |            0 |        0 |     0 |       0 |
++--------+--------+--------------+----------+-------+---------+
+"""
