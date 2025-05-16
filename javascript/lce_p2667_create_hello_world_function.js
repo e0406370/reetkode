@@ -1,4 +1,14 @@
 /**
+LCE 2667. Create Hello World Function
+
+Write a function createHelloWorld.
+It should return a new function that always returns "Hello World".
+
+Constraints:
+- 0 <= args.length <= 10
+*/
+
+/**
  * @return {Function}
  */
 

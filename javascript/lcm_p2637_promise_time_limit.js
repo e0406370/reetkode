@@ -1,4 +1,20 @@
 /**
+LCM 2637. Promise Time Limit
+
+Given an asynchronous function fn and a time t in milliseconds, return a new time limited version of the input function.
+fn takes arguments provided to the time limited function.
+
+The time limited function should follow these rules:
+- If the fn completes within the time limit of t milliseconds, the time limited function should resolve with the result.
+- If the execution of the fn exceeds the time limit, the time limited function should reject with the string "Time Limit Exceeded".
+
+Constraints:
+- 0 <= inputs.length <= 10
+- 0 <= t <= 1000
+- fn returns a promise
+*/
+
+/**
  * @param {Function} fn
  * @param {number} t
  * @return {Function}
