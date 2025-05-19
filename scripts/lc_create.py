@@ -6,7 +6,7 @@ def create_leetcode(filetype: str, difficulty: str, title: str) -> None:
 
     valid_difficulties = ["easy", "medium", "hard"]
     if difficulty not in valid_difficulties:
-        print(f"Error: Difficulty must be one of {valid_difficulties}.")
+        print(f"[ERROR] Difficulty must be one of {valid_difficulties}")
         sys.exit(1)
 
     tokens = title.split(".")
@@ -17,22 +17,24 @@ def create_leetcode(filetype: str, difficulty: str, title: str) -> None:
     try:
         if filetype == "folder":
             os.makedirs(name, exist_ok=True)
-            print(f"Folder created: {name}")
+            print(f"[SUCCESS] Folder created: {name}")
 
         else:
             name = f"{name}.{filetype}"
             with open(name, "x"):
-                print(f"File created: {name}")
+                print(f"[SUCCESS] File created: {name}")
 
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"[ERROR] {e}")
         sys.exit(1)
 
 
 if __name__ == "__main__":
 
     if len(sys.argv) < 4:
-        print("Usage: python lc_create.py <filetype> <difficulty> <title>")
+        # Create folder: python lc_create.py folder easy 1. Two Sum => lce_p0001_two_sum
+        # Create file:   python lc_create.py py easy 1. Two Sum => lce_p0001_two_sum.py
+        print("[USAGE] python lc_create.py <filetype> <difficulty> <title>")
         sys.exit(1)
 
     filetype = sys.argv[1]
