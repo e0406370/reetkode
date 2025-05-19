@@ -16,12 +16,12 @@ def create_leetcode(filetype: str, difficulty: str, title: str) -> None:
     name = f"lc{difficulty[0]}_p{number}_{text.replace(' ', '_').lower()}"
     try:
         if filetype == "folder":
-            os.makedirs(name, exist_ok=True)
+            os.makedirs(name=name, exist_ok=True)
             print(f"[SUCCESS] Folder created: {name}")
 
         else:
             name = f"{name}.{filetype}"
-            with open(name, "x"):
+            with open(file=name, mode="x"):
                 print(f"[SUCCESS] File created: {name}")
 
     except Exception as e:
