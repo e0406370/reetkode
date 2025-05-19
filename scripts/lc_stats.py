@@ -1,14 +1,10 @@
 from collections import defaultdict
+from lc_constants import IGNORED_DIRS, LEVELS, EASY, MEDIUM, HARD, TOTAL
 from tabulate import tabulate
 import pathlib
 
-LEVELS = ["easy", "medium", "hard", "total"]
-EASY, MEDIUM, HARD, TOTAL = LEVELS
 
-IGNORED_DIRS = [".git", "scripts"]
-
-
-def stats_leetcode() -> dict[str, dict[str, int]]:
+def stats_leetcode(display=True) -> dict[str, dict[str, int]]:
 
     base_dir = pathlib.Path(__file__).parent.parent.resolve()
     total_stats: dict[str, dict[str, int]] = defaultdict(dict)
@@ -16,7 +12,7 @@ def stats_leetcode() -> dict[str, dict[str, int]]:
     for sub_dir in base_dir.iterdir():
         if sub_dir.is_file():
             continue
-        
+
         language = sub_dir.name
         if language not in IGNORED_DIRS:
             stats = {
@@ -43,22 +39,24 @@ def stats_leetcode() -> dict[str, dict[str, int]]:
         level: sum(stats[level] for stats in total_stats.values())
         for level in LEVELS
     }
-    
-    headers = [""] + list(language.capitalize() for language in total_stats)
-    rows = [
-        [level] + [total_stats[language][level] for language in total_stats]
-        for level in LEVELS
-    ]
-    print(tabulate(tabular_data=rows, headers=headers, tablefmt="grid"))
+
+    if display:
+        headers = [""] + [language.capitalize() for language in total_stats]
+        rows = [
+            [level] + [total_stats[language][level] for language in total_stats]
+            for level in LEVELS
+        ]
+        print(tabulate(tabular_data=rows, headers=headers, tablefmt="grid"))
 
     return dict(total_stats)
+
 
 if __name__ == "__main__":
 
     stats_leetcode()
 
 """
-how the table looks like in CLI:
+Displays a formatted summary table in the CLI with counts of LeetCode problem solved, grouped by difficulty level and programming language.
 
 +--------+--------+--------------+----------+-------+---------+
 |        |   Java |   Javascript |   Python |   Sql |   Total |
