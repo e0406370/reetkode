@@ -1,39 +1,40 @@
-from lc_stats import LEVELS, EASY, MEDIUM, HARD, TOTAL, stats_leetcode
+from lc_constants import STATS_LEVELS, EASY, MEDIUM, HARD, TOTAL
+from lc_stats import stats_leetcode
 import matplotlib.pyplot as plt
 import numpy as np
 
 
 def chart_leetcode() -> None:
 
-    total_stats = stats_leetcode()
+    total_stats = stats_leetcode(display=False)
     N = len(total_stats)
 
     languages = list(total_stats.keys())
     solutions = {
         level: np.array([stats[level] for stats in total_stats.values()])
-        for level in LEVELS
+        for level in STATS_LEVELS
     }
-    bar_width = 0.5
 
     fig, axes = plt.subplots()
     bottom = np.zeros(N)
 
+    COLOR_MAP = {
+        EASY: "mediumseagreen",
+        MEDIUM: "gold",
+        HARD: "lightcoral"
+    }
+
     for level, completed in solutions.items():
         if level == TOTAL:
             continue
-          
-        color_map = {
-          EASY: "mediumseagreen",
-          MEDIUM: "gold",
-          HARD: "lightcoral"
-        }
+
         bars = axes.bar(
             x=languages,
             height=completed,
-            width=bar_width,
+            width=0.5,
             label=level,
             bottom=bottom,
-            color=color_map[level],
+            color=COLOR_MAP[level],
         )
         labels = [f"{int(h)}" if h > 0 else "" for h in completed]
 
@@ -55,13 +56,18 @@ def chart_leetcode() -> None:
             color="black",
             arrowprops=dict(arrowstyle="->", color="gray", lw=2),
         )
-    axes.set_ylim(0, max(totals) * 1.15)
 
+    axes.set_ylim(0, max(totals) * 1.15)
     axes.set_title("Number of LeetCode solutions by language and level")
     axes.legend()
 
     plt.savefig("lc_chart")
 
+
 if __name__ == "__main__":
 
     chart_leetcode()
+
+"""
+Generates a bar chart showing the number of LeetCode solutions by programming language and difficulty level, using Matplotlib and NumPy.
+"""

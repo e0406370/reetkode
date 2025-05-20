@@ -1,10 +1,10 @@
 from collections import defaultdict
-from lc_constants import IGNORED_DIRS, LEVELS, EASY, MEDIUM, HARD, TOTAL
+from lc_constants import IGNORED_DIRS, STATS_LEVELS, EASY, MEDIUM, HARD, TOTAL
 from tabulate import tabulate
 import pathlib
 
 
-def stats_leetcode(display=True) -> dict[str, dict[str, int]]:
+def stats_leetcode(display: bool = True) -> dict[str, dict[str, int]]:
 
     base_dir = pathlib.Path(__file__).parent.parent.resolve()
     total_stats: dict[str, dict[str, int]] = defaultdict(dict)
@@ -37,14 +37,14 @@ def stats_leetcode(display=True) -> dict[str, dict[str, int]]:
 
     total_stats[TOTAL] = {
         level: sum(stats[level] for stats in total_stats.values())
-        for level in LEVELS
+        for level in STATS_LEVELS
     }
 
     if display:
         headers = [""] + [language.capitalize() for language in total_stats]
         rows = [
             [level] + [total_stats[language][level] for language in total_stats]
-            for level in LEVELS
+            for level in STATS_LEVELS
         ]
         print(tabulate(tabular_data=rows, headers=headers, tablefmt="grid"))
 
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     stats_leetcode()
 
 """
-Displays a formatted summary table in the CLI with counts of LeetCode problem solved, grouped by difficulty level and programming language.
+Displays a formatted summary table in the CLI showing the number of LeetCode problems solved, grouped by difficulty level and programming language.
 
 +--------+--------+--------------+----------+-------+---------+
 |        |   Java |   Javascript |   Python |   Sql |   Total |

@@ -1,12 +1,6 @@
+from lc_constants import ACCEPTED_FILETYPES
 import pathlib
 import shutil
-
-FILE_DESTINATIONS = {
-    ".java": "java",
-    ".js": "javascript",
-    ".py": "python",
-    ".sql": "sql",
-}
 
 
 def move_leetcode() -> None:
@@ -15,17 +9,15 @@ def move_leetcode() -> None:
     files_moved = 0
 
     for file in base_dir.iterdir():
-        if file.is_dir() or file.name[:3] not in ["lce", "lcm", "lch"]:
+        if file.is_dir() or file.name[:3] not in ("lce", "lcm", "lch"):
             continue
 
         filetype = pathlib.Path(file).suffix
-        if filetype not in FILE_DESTINATIONS:
-            print(
-                f"[ERROR] '{file.name}' does not have an accepted filetype => {[key for key in FILE_DESTINATIONS.keys()]}"
-            )
+        if filetype not in ACCEPTED_FILETYPES:
+            print(f"[ERROR] '{file.name}' does not have an accepted filetype => {[key for key in ACCEPTED_FILETYPES.keys()]}")
             continue
 
-        dest_dir = base_dir.joinpath(FILE_DESTINATIONS[filetype])
+        dest_dir = base_dir.joinpath(ACCEPTED_FILETYPES[filetype])
 
         try:
             shutil.move(src=file, dst=dest_dir / file.name)
@@ -43,3 +35,7 @@ def move_leetcode() -> None:
 if __name__ == "__main__":
 
     move_leetcode()
+
+"""
+Scans the base directory for LeetCode solution files and moves them into the respective language folders, based on their file extension.
+"""
