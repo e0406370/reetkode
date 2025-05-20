@@ -1,5 +1,5 @@
-from lc_constants import STATS_LEVELS, EASY, MEDIUM, HARD, TOTAL
 from lc_stats import stats_leetcode
+import lc_constants as lcc
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -12,20 +12,20 @@ def chart_leetcode() -> None:
     languages = list(total_stats.keys())
     solutions = {
         level: np.array([stats[level] for stats in total_stats.values()])
-        for level in STATS_LEVELS
+        for level in lcc.STATS_LEVELS
     }
 
     fig, axes = plt.subplots()
     bottom = np.zeros(N)
 
     COLOR_MAP = {
-        EASY: "mediumseagreen",
-        MEDIUM: "gold",
-        HARD: "lightcoral"
+        lcc.LEVEL_EASY: "mediumseagreen",
+        lcc.LEVEL_MEDIUM: "gold",
+        lcc.LEVEL_HARD: "lightcoral",
     }
 
     for level, completed in solutions.items():
-        if level == TOTAL:
+        if level == lcc.LEVEL_TOTAL:
             continue
 
         bars = axes.bar(

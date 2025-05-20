@@ -1,6 +1,6 @@
 from collections import defaultdict
-from lc_constants import IGNORED_DIRS, STATS_LEVELS, EASY, MEDIUM, HARD, TOTAL
 from tabulate import tabulate
+import lc_constants as lcc
 import pathlib
 
 
@@ -14,37 +14,39 @@ def stats_leetcode(display: bool = True) -> dict[str, dict[str, int]]:
             continue
 
         language = sub_dir.name
-        if language not in IGNORED_DIRS:
+        if language not in lcc.IGNORED_DIRS:
             stats = {
-                EASY: 0,
-                MEDIUM: 0,
-                HARD: 0,
-                TOTAL: 0
+                lcc.LEVEL_EASY: 0,
+                lcc.LEVEL_MEDIUM: 0,
+                lcc.LEVEL_HARD: 0,
+                lcc.LEVEL_TOTAL: 0,
             }
 
             for solution in sub_dir.iterdir():
-                stats[TOTAL] += 1
+                stats[lcc.LEVEL_TOTAL] += 1
 
                 match solution.name[:3]:
-                    case "lce":
-                        stats[EASY] += 1
-                    case "lcm":
-                        stats[MEDIUM] += 1
-                    case "lch":
-                        stats[HARD] += 1
+                    case lcc.LC_PREFIX_EASY:
+                        stats[lcc.LEVEL_EASY] += 1
+
+                    case lcc.LC_PREFIX_MEDIUM:
+                        stats[lcc.LEVEL_MEDIUM] += 1
+
+                    case lcc.LC_PREFIX_HARD:
+                        stats[lcc.LEVEL_HARD] += 1
 
             total_stats[language] = stats
 
-    total_stats[TOTAL] = {
+    total_stats[lcc.LEVEL_TOTAL] = {
         level: sum(stats[level] for stats in total_stats.values())
-        for level in STATS_LEVELS
+        for level in lcc.STATS_LEVELS
     }
 
     if display:
         headers = [""] + [language.capitalize() for language in total_stats]
         rows = [
             [level] + [total_stats[language][level] for language in total_stats]
-            for level in STATS_LEVELS
+            for level in lcc.STATS_LEVELS
         ]
         print(tabulate(tabular_data=rows, headers=headers, tablefmt="grid"))
 

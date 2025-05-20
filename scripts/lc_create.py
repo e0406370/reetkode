@@ -1,12 +1,12 @@
-from lc_constants import VALID_DIFFICULTIES
+import lc_constants as lcc
 import os
 import sys
 
 
 def create_leetcode(filetype: str, difficulty: str, title: str) -> None:
 
-    if difficulty not in VALID_DIFFICULTIES:
-        print(f"[ERROR] Difficulty must be one of {VALID_DIFFICULTIES}")
+    if difficulty not in lcc.DIFFICULTY_LEVELS:
+        print(f"[ERROR] Difficulty must be one of {lcc.DIFFICULTY_LEVELS}")
         sys.exit(1)
 
     try:
