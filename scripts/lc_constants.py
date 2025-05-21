@@ -2,6 +2,7 @@ REETKODE_BASE_URL = "https://github.com/e0406370/reetkode"
 REETKODE_SOLUTION_URL = REETKODE_BASE_URL + "/blob/{branch}/{folder}/{filename}"
 REETKODE_ICON_URL = REETKODE_BASE_URL + "/raw/{branch}/icons/{icon}"
 REETKODE_CHART_URL = REETKODE_BASE_URL + "/raw/{branch}/lc_chart.png"
+LEETCODE_PROBLEM_URL = "https://lcid.cc/{id}"
 
 IGNORED_DIRS = (".git", "icons", "scripts")
 ACCEPTED_FILETYPES_MAP = {

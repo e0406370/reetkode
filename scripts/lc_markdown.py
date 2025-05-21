@@ -129,7 +129,7 @@ def markdown_leetcode() -> None:
 
                 soln_links.append(html_anchor_img)
 
-            soln_title = soln_lst[0].title
+            soln_title = f"[{soln_lst[0].title}]({lcc.LEETCODE_PROBLEM_URL.format(id=soln_id)})"
 
             soln_difficulty = soln_lst[0].difficulty
             match soln_difficulty:
