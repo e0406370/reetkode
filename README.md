@@ -3,7 +3,7 @@ Reetkode
 ========
   
 My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference.  
-This README was generated using a custom-built Python script: [`lc_markdown.py`](scripts/lc_markdown.py).  
+This README was generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py)  
 ***  
   
 ## Progress Overview  

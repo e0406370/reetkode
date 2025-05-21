@@ -102,7 +102,7 @@ def markdown_leetcode() -> None:
         curr_branch = Repository(".").head.shorthand
         
         readme_file.new_line(text="My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference.")
-        readme_file.new_line(text="This README was generated using a custom-built Python script: [`lc_markdown.py`](scripts/lc_markdown.py).")
+        readme_file.new_line(text="This README was generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py)")
         readme_file.new_line(text="***")
         readme_file.new_line()
 
@@ -188,7 +188,7 @@ def markdown_leetcode() -> None:
         readme_file.new_table(columns=cols_num, rows=rows_num + 1, text=cells, text_align="left")
         readme_file.new_line()
 
-        # create README
+        # generate README
         readme_file.create_md_file()
         print(f"[SUCCESS] README generated (table included: {rows_num} rows x {cols_num} columns)")
 
