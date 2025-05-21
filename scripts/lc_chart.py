@@ -63,7 +63,7 @@ def chart_leetcode() -> None:
 
     chart_name = "lc_chart"
     plt.savefig(chart_name)
-    print(f"[SUCCESS] Chart image generated: {chart_name}.png")
+    print(f"[SUCCESS] Chart image '{chart_name}.png' generated (total number of solutions: {int(totals[-1])})")
 
 
 if __name__ == "__main__":
