@@ -10,6 +10,7 @@ import pathlib
 class LCSolution:
     id: int
     difficulty: str
+    type: str
     title: str
     folder: str
     filename: str
@@ -50,6 +51,16 @@ def retrieve_data() -> dict[int, list[LCSolution]]:
             filetype = pathlib.Path(solution).suffix
             folder = lcc.ACCEPTED_FILETYPES_MAP[filetype]
 
+            # retrieve type
+            if folder == "sql":
+                type = lcc.TYPE_DATABASE
+
+            elif folder == "shell":
+                type = lcc.TYPE_SHELL
+
+            else:
+                type = lcc.TYPE_ALGORITHM
+
             # retrieve icon
             icon = lcc.LANGUAGE_ICONS_MAP[folder]
 
@@ -72,7 +83,7 @@ def retrieve_data() -> dict[int, list[LCSolution]]:
             title = f"{' '.join(title_tokens)}"
 
             # create LCSolution object and add to dict
-            lc_soln = LCSolution(id, difficulty, title, folder, filename, icon)
+            lc_soln = LCSolution(id, difficulty, type, title, folder, filename, icon)
 
             if id in lc_soln_data:
                 lc_soln_data[id].append(lc_soln)
@@ -93,6 +104,7 @@ def markdown_leetcode() -> None:
         readme_file.new_line(text="My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference.")
         readme_file.new_line(text="This README was generated using a custom-built Python script: [`lc_markdown.py`](scripts/lc_markdown.py).")
         readme_file.new_line(text="***")
+        readme_file.new_line()
 
         # data showing the number of LeetCode problems solved, grouped by difficulty level and programming language
         # key = programming language, value = mapping of each difficulty level to the number of problems solved
@@ -102,14 +114,15 @@ def markdown_leetcode() -> None:
         chart_link_url = lcc.REETKODE_CHART_URL.format(branch=curr_branch)
 
         readme_file.new_line(text="## Progress Overview")
-        readme_file.new_line(readme_file.new_inline_image(text="LeetCode stats", path=chart_link_url))    
+        readme_file.new_line(readme_file.new_inline_image(text="LeetCode stats", path=chart_link_url))
+        readme_file.new_line()
 
         # data showing the list of solutions for each LeetCode problem ID with relevant metadata
         # key = problem ID, value = list of solutions corresponding to the ID
         soln_data = retrieve_data()
 
         # create and impose table onto README
-        headers = ["ID", "Difficulty", "Title", "Solutions"]
+        headers = ["ID", "Difficulty", "Type", "Title", "Solutions"]
         cells = list(headers)
 
         for soln_id, soln_lst in soln_data.items():
@@ -148,10 +161,22 @@ def markdown_leetcode() -> None:
                 case lcc.LEVEL_HARD:
                     soln_difficulty = f"🟥 {soln_difficulty.capitalize()}"
 
+            soln_type = soln_lst[0].type
+            match soln_type:
+                case lcc.TYPE_ALGORITHM:
+                    soln_type = f"⚙️"
+
+                case lcc.TYPE_DATABASE:
+                    soln_type = f"🛢️"
+
+                case lcc.TYPE_SHELL:
+                    soln_type = f"📜"
+
             cells.extend(
                 [
                     f"**{soln_id}**",
                     soln_difficulty,
+                    soln_type,
                     soln_title,
                     " ".join(soln_links)
                 ]
@@ -161,6 +186,7 @@ def markdown_leetcode() -> None:
 
         readme_file.new_line(text="## Solutions Directory")
         readme_file.new_table(columns=cols_num, rows=rows_num + 1, text=cells, text_align="left")
+        readme_file.new_line()
 
         # create README
         readme_file.create_md_file()
