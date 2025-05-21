@@ -1,5 +1,7 @@
 REETKODE_BASE_URL = "https://github.com/e0406370/reetkode"
-REETKODE_SOLUTION_URL = "https://github.com/e0406370/reetkode/blob/{branch}/{folder}/{filename}"
+REETKODE_SOLUTION_URL = REETKODE_BASE_URL + "/blob/{branch}/{folder}/{filename}"
+REETKODE_ICON_URL = REETKODE_BASE_URL + "/raw/{branch}/icons/{icon}"
+REETKODE_CHART_URL = REETKODE_BASE_URL + "/raw/{branch}/lc_chart.png"
 
 IGNORED_DIRS = (".git", "icons", "scripts")
 ACCEPTED_FILETYPES_MAP = {
@@ -24,28 +26,29 @@ ACCEPTED_FILETYPES_MAP = {
     ".ts": "typescript",
 }
 LANGUAGE_ICONS_MAP = {
-    "c": "icons/c-original.svg",
-    "cpp": "icons/cplusplus-original.svg",
-    "csharp": "icons/csharp-original.svg",
-    "dart": "icons/dart-original.svg",
-    "elixir": "icons/elixir-original.svg",
-    "erlang": "icons/erlang-original.svg",
-    "go": "icons/go-original.svg",
-    "java": "icons/java-original.svg",
-    "javascript": "icons/javascript-original.svg",
-    "kotlin": "icons/kotlin-original.svg",
-    "mysql": "icons/mysql-original.svg",
-    "oracle": "icons/oracle-original.svg",
-    "php": "icons/php-original.svg",
-    "postgresql": "icons/postgresql-original.svg",
-    "python": "icons/python-original.svg",
-    "ruby": "icons/ruby-original.svg",
-    "rust": "icons/rust-original.svg",
-    "scala": "icons/scala-original.svg",
-    "shell": "icons/bash-original.svg",
-    "sqlserver": "icons/sqlserver-original.svg",
-    "swift": "icons/swift-original.svg",
-    "typescript": "icons/typescript-original.svg",
+    "c": "c-original.svg",
+    "cpp": "cplusplus-original.svg",
+    "csharp": "csharp-original.svg",
+    "dart": "dart-original.svg",
+    "elixir": "elixir-original.svg",
+    "erlang": "erlang-original.svg",
+    "go": "go-original.svg",
+    "java": "java-original.svg",
+    "javascript": "javascript-original.svg",
+    "kotlin": "kotlin-original.svg",
+    "mysql": "mysql-original.svg",
+    "oracle": "oracle-original.svg",
+    "php": "php-original.svg",
+    "postgresql": "postgresql-original.svg",
+    "python": "python-original.svg",
+    "ruby": "ruby-original.svg",
+    "rust": "rust-original.svg",
+    "scala": "scala-original.svg",
+    "shell": "bash-original.svg",
+    "sql": "sql-original.svg",
+    "sqlserver": "sqlserver-original.svg",
+    "swift": "swift-original.svg",
+    "typescript": "typescript-original.svg",
 }
 
 DATABASE_SUFFIXES = ("mysql", "sqlserver", "oracle", "postgresql")
