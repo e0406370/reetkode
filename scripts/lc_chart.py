@@ -61,7 +61,9 @@ def chart_leetcode() -> None:
     axes.set_title("Number of LeetCode solutions by language and level")
     axes.legend()
 
-    plt.savefig("lc_chart")
+    chart_name = "lc_chart"
+    plt.savefig(chart_name)
+    print(f"[SUCCESS] Chart image generated: {chart_name}.png")
 
 
 if __name__ == "__main__":
