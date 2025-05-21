@@ -2,8 +2,12 @@
 Reetkode
 ========
   
+My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference.  
+This README was generated using a custom-built Python script: [`lc_markdown.py`](scripts/lc_markdown.py).  
+***  
+## Progress Overview  
 ![LeetCode stats](https://github.com/e0406370/reetkode/raw/scripts/lc_chart.png)  
-
+## Solutions Directory
 |ID|Difficulty|Title|Solutions|
 | :--- | :--- | :--- | :--- |
 |**1**|🟩 Easy|[Two Sum](https://lcid.cc/1)|<a href="https://github.com/e0406370/reetkode/blob/scripts/java/lce_p0001_two_sum.java"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/java-original.svg" height="25"></a>|

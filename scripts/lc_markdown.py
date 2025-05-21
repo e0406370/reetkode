@@ -89,6 +89,10 @@ def markdown_leetcode() -> None:
     try:
         readme_file = MdUtils(file_name="README.md", title="Reetkode")
         curr_branch = Repository(".").head.shorthand
+        
+        readme_file.new_line(text="My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference.")
+        readme_file.new_line(text="This README was generated using a custom-built Python script: [`lc_markdown.py`](scripts/lc_markdown.py).")
+        readme_file.new_line(text="***")
 
         # data showing the number of LeetCode problems solved, grouped by difficulty level and programming language
         # key = programming language, value = mapping of each difficulty level to the number of problems solved
@@ -96,6 +100,8 @@ def markdown_leetcode() -> None:
 
         # create and impose chart onto README
         chart_link_url = lcc.REETKODE_CHART_URL.format(branch=curr_branch)
+
+        readme_file.new_line(text="## Progress Overview")
         readme_file.new_line(readme_file.new_inline_image(text="LeetCode stats", path=chart_link_url))    
 
         # data showing the list of solutions for each LeetCode problem ID with relevant metadata
@@ -153,7 +159,7 @@ def markdown_leetcode() -> None:
 
         cols_num, rows_num = len(headers), len(soln_data)
 
-        readme_file.new_line()
+        readme_file.new_line(text="## Solutions Directory")
         readme_file.new_table(columns=cols_num, rows=rows_num + 1, text=cells, text_align="left")
 
         # create README
