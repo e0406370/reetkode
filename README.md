@@ -2,6 +2,7 @@
 Reetkode
 ========
   
+![LeetCode stats](https://github.com/e0406370/reetkode/raw/scripts/lc_chart.png)  
 
 |ID|Difficulty|Title|Solutions|
 | :--- | :--- | :--- | :--- |
@@ -49,7 +50,7 @@ Reetkode
 |**620**|🟩 Easy|Not Boring Movies|<a href="https://github.com/e0406370/reetkode/blob/scripts/sql/lce_p0620_not_boring_movies_postgresql.sql"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/postgresql-original.svg" height="25"></a>|
 |**627**|🟩 Easy|Swap Salary|<a href="https://github.com/e0406370/reetkode/blob/scripts/sql/lce_p0627_swap_salary_postgresql.sql"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/postgresql-original.svg" height="25"></a>|
 |**657**|🟩 Easy|Robot Return To Origin|<a href="https://github.com/e0406370/reetkode/blob/scripts/python/lce_p0657_robot_return_to_origin.py"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/python-original.svg" height="25"></a>|
-|**682**|🟩 Easy|Baseball Game|<a href="https://github.com/e0406370/reetkode/blob/scripts/java/lce_p0682_baseball_game.java"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/java-original.svg" height="25"></a> <a href="https://github.com/e0406370/reetkode/blob/scripts/javascript/lce_p0682_baseball_game.js"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/javascript-original.svg" height="25"></a> <a href="https://github.com/e0406370/reetkode/blob/scripts/python/lce_p0682_baseball_game.py"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/python-original.svg" height="25"></a>|
+|**682**|🟩 Easy|Baseball Game|<a href="https://github.com/e0406370/reetkode/blob/scripts/java/lce_p0682_baseball_game.java"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/java-original.svg" height="25"></a> <a href="https://github.com/e0406370/reetkode/blob/scripts/python/lce_p0682_baseball_game.py"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/python-original.svg" height="25"></a>|
 |**709**|🟩 Easy|To Lower Case|<a href="https://github.com/e0406370/reetkode/blob/scripts/python/lce_p0709_to_lower_case.py"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/python-original.svg" height="25"></a>|
 |**728**|🟩 Easy|Self Dividing Numbers|<a href="https://github.com/e0406370/reetkode/blob/scripts/python/lce_p0728_self_dividing_numbers.py"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/python-original.svg" height="25"></a>|
 |**796**|🟩 Easy|Rotate String|<a href="https://github.com/e0406370/reetkode/blob/scripts/java/lce_p0796_rotate_string.java"><img src="https://github.com/e0406370/reetkode/raw/scripts/icons/java-original.svg" height="25"></a>|

@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from lc_stats import stats_leetcode
+from lc_chart import chart_leetcode
 from mdutils.mdutils import MdUtils
 from pygit2 import Repository
 import lc_constants as lcc
@@ -16,7 +16,7 @@ class LCSolution:
     icon: str
 
 
-def retrieve_data() ->  dict[int, list[LCSolution]]:
+def retrieve_data() -> dict[int, list[LCSolution]]:
 
     lc_soln_data: dict[int, list[LCSolution]] = {}
 
@@ -49,7 +49,7 @@ def retrieve_data() ->  dict[int, list[LCSolution]]:
             # retrieve folder
             filetype = pathlib.Path(solution).suffix
             folder = lcc.ACCEPTED_FILETYPES_MAP[filetype]
-            
+
             # retrieve icon
             icon = lcc.LANGUAGE_ICONS_MAP[folder]
 
@@ -86,72 +86,92 @@ def retrieve_data() ->  dict[int, list[LCSolution]]:
 
 def markdown_leetcode() -> None:
 
-    readme_file = MdUtils(file_name="README.md", title="Reetkode")
-    curr_branch = Repository(".").head.shorthand
-    
-    # data showing the list of solutions for each LeetCode problem ID with relevant metadata
-    # key = problem ID, value = list of solutions corresponding to the ID
-    soln_data = retrieve_data()
-    
-    # data showing the number of LeetCode problems solved, grouped by difficulty level and programming language
-    # key = programming language, value = mapping of each difficulty level to the number of problems solved
-    stats_data = stats_leetcode(display=False)
+    try:
+        readme_file = MdUtils(file_name="README.md", title="Reetkode")
+        curr_branch = Repository(".").head.shorthand
 
-    # soln_data => create the table
-    headers = ["ID", "Difficulty", "Title", "Solutions"]
-    cells = list(headers)
+        # data showing the number of LeetCode problems solved, grouped by difficulty level and programming language
+        # key = programming language, value = mapping of each difficulty level to the number of problems solved
+        chart_leetcode()
 
-    for soln_id, soln_lst in soln_data.items():
-        soln_links: list[str] = []
+        # create and impose chart onto README
+        chart_link_url = lcc.REETKODE_CHART_URL.format(branch=curr_branch)
+        readme_file.new_line(readme_file.new_inline_image(text="LeetCode stats", path=chart_link_url))    
 
-        for soln in soln_lst:
-            solution_href_url = lcc.REETKODE_SOLUTION_URL.format(
-                branch=curr_branch,
-                folder=soln.folder,
-                filename=soln.filename
+        # data showing the list of solutions for each LeetCode problem ID with relevant metadata
+        # key = problem ID, value = list of solutions corresponding to the ID
+        soln_data = retrieve_data()
+
+        # create and impose table onto README
+        headers = ["ID", "Difficulty", "Title", "Solutions"]
+        cells = list(headers)
+
+        for soln_id, soln_lst in soln_data.items():
+            soln_links: list[str] = []
+
+            for soln in soln_lst:
+                solution_href_url = lcc.REETKODE_SOLUTION_URL.format(
+                    branch=curr_branch,
+                    folder=soln.folder,
+                    filename=soln.filename
+                )
+
+                icon_src_url = lcc.REETKODE_ICON_URL.format(
+                    branch=curr_branch,
+                    icon=soln.icon
+                )
+
+                html_anchor_img = (
+                    f'<a href="{solution_href_url}">'
+                    f'<img src="{icon_src_url}" height="25">'
+                    f'</a>'
+                )
+
+                soln_links.append(html_anchor_img)
+
+            soln_title = soln_lst[0].title
+
+            soln_difficulty = soln_lst[0].difficulty
+            match soln_difficulty:
+                case lcc.LEVEL_EASY:
+                    soln_difficulty = f"🟩 {soln_difficulty.capitalize()}"
+
+                case lcc.LEVEL_MEDIUM:
+                    soln_difficulty = f"🟨 {soln_difficulty.capitalize()}"
+
+                case lcc.LEVEL_HARD:
+                    soln_difficulty = f"🟥 {soln_difficulty.capitalize()}"
+
+            cells.extend(
+                [
+                    f"**{soln_id}**",
+                    soln_difficulty,
+                    soln_title,
+                    " ".join(soln_links)
+                ]
             )
 
-            icon_src_url = lcc.REETKODE_ICON_URL.format(
-                branch=curr_branch,
-                icon=soln.icon
-            )
+        cols_num, rows_num = len(headers), len(soln_data)
 
-            html_anchor_img = (
-                f'<a href="{solution_href_url}">'
-                f'<img src="{icon_src_url}" height="25">'
-                f'</a>'
-            )
+        readme_file.new_line()
+        readme_file.new_table(columns=cols_num, rows=rows_num + 1, text=cells, text_align="left")
 
-            soln_links.append(html_anchor_img)
+        # create README
+        readme_file.create_md_file()
+        print(f"[SUCCESS] README generated (table included: {rows_num} rows x {cols_num} columns)")
 
-        soln_title = soln_lst[0].title
 
-        soln_difficulty = soln_lst[0].difficulty
-        match soln_difficulty:
-            case lcc.LEVEL_EASY:
-                soln_difficulty = f"🟩 {soln_difficulty.capitalize()}"
-
-            case lcc.LEVEL_MEDIUM:
-                soln_difficulty = f"🟨 {soln_difficulty.capitalize()}"
-
-            case lcc.LEVEL_HARD:
-                soln_difficulty = f"🟥 {soln_difficulty.capitalize()}"
-        
-        cells.extend(
-            [
-                f"**{soln_id}**",
-                soln_difficulty,
-                soln_title,
-                " ".join(soln_links)
-            ]
-        )
-
-    readme_file.new_line()
-    readme_file.new_table(columns=len(headers), rows=len(soln_data) + 1, text=cells, text_align="left")
-
-    readme_file.create_md_file()
+    except Exception as e:
+        print(f"[ERROR] Failed to generate README")
+        print(f"=> {e}")
 
 
 if __name__ == "__main__":
 
     markdown_leetcode()
+
+"""
+Generates a README file summarising progress made on LeetCode:
+- Displays a bar chart showing the number of solutions by programming language and difficulty level.
+- Includes a table listing all solved problems with links to their respective solution files.
+"""
