@@ -9,7 +9,7 @@ def chart_leetcode() -> None:
     total_stats = stats_leetcode(display=False)
     N = len(total_stats)
 
-    languages = list(total_stats.keys())
+    languages = list(key.upper() if key == "sql" else key.capitalize() for key in total_stats.keys())
     solutions = {
         level: np.array([stats[level] for stats in total_stats.values()])
         for level in lcc.STATS_LEVELS
@@ -32,7 +32,7 @@ def chart_leetcode() -> None:
             x=languages,
             height=completed,
             width=0.5,
-            label=level,
+            label=level.capitalize(),
             bottom=bottom,
             color=COLOR_MAP[level],
         )
