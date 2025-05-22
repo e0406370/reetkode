@@ -101,8 +101,12 @@ def markdown_leetcode() -> None:
     try:
         readme_file = MdUtils(file_name="README.md", title="Reetkode")
         
-        readme_file.new_line(text="My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference.")
-        readme_file.new_line(text="This README was generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py)")
+        readme_file.new_line(text="My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference. 😃")
+        readme_file.new_line()
+        readme_file.new_line(text=
+                             "This README was generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py). " +
+                             "The generation is maintained by a **GitHub Actions** [workflow](.github/workflows/main.yml) that automatically updates the content whenever new solution files are merged into the `main` branch."
+                            )
         readme_file.new_line(text="***")
         readme_file.new_line()
 
