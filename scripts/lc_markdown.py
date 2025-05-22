@@ -91,8 +91,8 @@ def retrieve_data() -> dict[int, list[LCSolution]]:
             else:
                 lc_soln_data[id] = [lc_soln]
 
-    # sort the dict in ascending order based on the id key
-    lc_soln_data = {k: v for k, v in sorted(lc_soln_data.items(), key=lambda item: item[0])}
+    # sort the dict in ascending order based on the id key and icon in value
+    lc_soln_data = {k: sorted(v, key=lambda sol: sol.icon) for k, v in sorted(lc_soln_data.items(), key=lambda item: item[0])}
     return lc_soln_data
 
 
