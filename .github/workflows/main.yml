@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GIT_PAT }}
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -26,7 +28,7 @@ jobs:
 
       - name: Cache pip dependencies
         uses: actions/cache@v4
-        with:  
+        with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-${{ hashFiles('.github/requirements.txt') }}
           restore-keys: |
