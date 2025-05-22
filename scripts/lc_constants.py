@@ -39,6 +39,7 @@ LANGUAGE_ICONS_MAP = {
     "mysql": "mysql-original.svg",
     "oracle": "oracle-original.svg",
     "php": "php-original.svg",
+    "pandas": "pandas-original.svg",
     "postgresql": "postgresql-original.svg",
     "python": "python-original.svg",
     "ruby": "ruby-original.svg",
@@ -51,7 +52,7 @@ LANGUAGE_ICONS_MAP = {
     "typescript": "typescript-original.svg",
 }
 
-DATABASE_SUFFIXES = ("mysql", "sqlserver", "oracle", "postgresql")
+DATABASE_SUFFIXES = ("mysql", "sqlserver", "oracle", "pandas", "postgresql")
 ROMAN_SUFFIXES = ("i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x")
 
 LEVEL_EASY = "easy"
