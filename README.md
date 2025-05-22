@@ -7,7 +7,7 @@ This README was generated using the following custom-built **Python** scripts: [
 ***  
   
 ## Progress Overview  
-![LeetCode stats](lc_chart.png)  
+![LeetCode stats](lc_chart.png?)  
   
 ## Solutions Directory
 |ID|Difficulty|Type|Title|Solutions|
