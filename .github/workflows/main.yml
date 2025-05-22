@@ -63,11 +63,10 @@ jobs:
           if ! git diff --cached --quiet; then
             git config user.name $GIT_USERNAME
             git config user.email $GIT_EMAIL
-            git commit -m "[auto] Update README after merge to main" \
+            git commit -m "[auto] Update README after merge to main (R.N: ${{ github.run_number }})" \
                       -m "Files moved: ${{ steps.move_step.outputs.files_moved }}" \
                       -m "Workflow: ${{ github.workflow }}" \
                       -m "Triggered on: ${{ github.event_name }}" \
-                      -m "Run Number: ${{ github.run_number }}" \
                       -m "Run Link: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           else
             echo "No changes to commit"
