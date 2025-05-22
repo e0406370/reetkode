@@ -99,7 +99,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**1346**|🟩 Easy|⚙️|[Check If N And Its Double Exist](https://lcid.cc/1346)|<a href="java/lce_p1346_check_if_n_and_its_double_exist.java"><img src="icons/java-original.svg" height="25"></a>|
 |**1352**|🟨 Medium|⚙️|[Product Of The Last K Numbers](https://lcid.cc/1352)|<a href="python/lcm_p1352_product_of_the_last_k_numbers.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1378**|🟩 Easy|🛢️|[Replace Employee Id With The Unique Identifier](https://lcid.cc/1378)|<a href="sql/lce_p1378_replace_employee_id_with_the_unique_identifier_sqlserver.sql"><img src="icons/sqlserver-original.svg" height="25"></a>|
-|**1393**|🟨 Medium|🛢️|[Capital Gain Loss](https://lcid.cc/1393)|<a href="sql/lcm_p1393_capital_gain_loss.sql"><img src="icons/sql-original.svg" height="25"></a>|
+|**1393**|🟨 Medium|🛢️|[Capital Gain Loss](https://lcid.cc/1393)|<a href="sql/lcm_p1393_capital_gain_loss_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1407**|🟩 Easy|🛢️|[Top Travellers](https://lcid.cc/1407)|<a href="sql/lce_p1407_top_travellers_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1455**|🟩 Easy|⚙️|[Check If A Word Occurs As A Prefix Of Any Word In A Sentence](https://lcid.cc/1455)|<a href="java/lce_p1455_check_if_a_word_occurs_as_a_prefix_of_any_word_in_a_sentence.java"><img src="icons/java-original.svg" height="25"></a>|
 |**1484**|🟩 Easy|🛢️|[Group Sold Products By The Date](https://lcid.cc/1484)|<a href="sql/lce_p1484_group_sold_products_by_the_date_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
@@ -193,7 +193,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**2727**|🟩 Easy|⚙️|[Is Object Empty](https://lcid.cc/2727)|<a href="javascript/lce_p2727_is_object_empty.js"><img src="icons/javascript-original.svg" height="25"></a> <a href="typescript/lce_p2727_is_object_empty.ts"><img src="icons/typescript-original.svg" height="25"></a>|
 |**2728**|🟩 Easy|⚙️|[Count Houses In A Circular Street](https://lcid.cc/2728)|<a href="python/lce_p2728_count_houses_in_a_circular_street.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2769**|🟩 Easy|⚙️|[Find The Maximum Achievable Number](https://lcid.cc/2769)|<a href="python/lce_p2769_find_the_maximum_achievable_number.py"><img src="icons/python-original.svg" height="25"></a>|
-|**2879**|🟩 Easy|⚙️|[Display The First Three Rows Pandas](https://lcid.cc/2879)|<a href="python/lce_p2879_display_the_first_three_rows_pandas.py"><img src="icons/python-original.svg" height="25"></a>|
+|**2879**|🟩 Easy|🛢️|[Display The First Three Rows](https://lcid.cc/2879)|<a href="python/lce_p2879_display_the_first_three_rows_pandas.py"><img src="icons/pandas-original.svg" height="25"></a>|
 |**2914**|🟨 Medium|⚙️|[Minimum Number Of Changes To Make Binary String Beautiful](https://lcid.cc/2914)|<a href="java/lcm_p2914_minimum_number_of_changes_to_make_binary_string_beautiful.java"><img src="icons/java-original.svg" height="25"></a>|
 |**2974**|🟩 Easy|⚙️|[Minimum Number Game](https://lcid.cc/2974)|<a href="python/lce_p2974_minimum_number_game.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3014**|🟩 Easy|⚙️|[Minimum Number Of Pushes To Type Word I](https://lcid.cc/3014)|<a href="java/lce_p3014_minimum_number_of_pushes_to_type_word_i.java"><img src="icons/java-original.svg" height="25"></a>|

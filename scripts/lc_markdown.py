@@ -69,6 +69,8 @@ def retrieve_data() -> dict[int, list[LCSolution]]:
 
             if title_tokens[-1] in lcc.DATABASE_SUFFIXES:
                 icon = lcc.LANGUAGE_ICONS_MAP[title_tokens[-1]]
+                if title_tokens[-1] == "pandas": type = lcc.TYPE_DATABASE
+
                 title_tokens.pop()
                 title_tokens_len -= 1
 
