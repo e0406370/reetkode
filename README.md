@@ -27,6 +27,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**73**|🟨 Medium|⚙️|[Set Matrix Zeroes](https://lcid.cc/73)|<a href="python/lcm_p0073_set_matrix_zeroes.py"><img src="icons/python-original.svg" height="25"></a>|
 |**77**|🟨 Medium|⚙️|[Combinations](https://lcid.cc/77)|<a href="java/lcm_p0077_combinations.java"><img src="icons/java-original.svg" height="25"></a>|
 |**128**|🟨 Medium|⚙️|[Longest Consecutive Sequence](https://lcid.cc/128)|<a href="java/lcm_p0128_longest_consecutive_sequence.java"><img src="icons/java-original.svg" height="25"></a>|
+|**136**|🟩 Easy|⚙️|[Single Number](https://lcid.cc/136)|<a href="java/lce_p0136_single_number.java"><img src="icons/java-original.svg" height="25"></a>|
 |**175**|🟩 Easy|🛢️|[Combine Two Tables](https://lcid.cc/175)|<a href="sql/lce_p0175_combine_two_tables_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a> <a href="sql/lce_p0175_combine_two_tables_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a>|
 |**176**|🟨 Medium|🛢️|[Second Highest Salary](https://lcid.cc/176)|<a href="sql/lcm_p0176_second_highest_salary_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**178**|🟨 Medium|🛢️|[Rank Scores](https://lcid.cc/178)|<a href="sql/lcm_p0178_rank_scores_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
