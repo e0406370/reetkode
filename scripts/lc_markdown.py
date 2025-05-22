@@ -1,7 +1,6 @@
 from dataclasses import dataclass
 from lc_chart import chart_leetcode
 from mdutils.mdutils import MdUtils
-from pygit2 import Repository
 import lc_constants as lcc
 import pathlib
 
@@ -99,7 +98,6 @@ def markdown_leetcode() -> None:
 
     try:
         readme_file = MdUtils(file_name="README.md", title="Reetkode")
-        curr_branch = Repository(".").head.shorthand
         
         readme_file.new_line(text="My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference.")
         readme_file.new_line(text="This README was generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py)")
@@ -111,7 +109,7 @@ def markdown_leetcode() -> None:
         chart_leetcode()
 
         # create and impose chart onto README
-        chart_link_url = lcc.REETKODE_CHART_URL.format(branch=curr_branch)
+        chart_link_url = lcc.REETKODE_CHART_URL
 
         readme_file.new_line(text="## Progress Overview")
         readme_file.new_line(readme_file.new_inline_image(text="LeetCode stats", path=chart_link_url))
@@ -130,13 +128,11 @@ def markdown_leetcode() -> None:
 
             for soln in soln_lst:
                 solution_href_url = lcc.REETKODE_SOLUTION_URL.format(
-                    branch=curr_branch,
                     folder=soln.folder,
                     filename=soln.filename
                 )
 
                 icon_src_url = lcc.REETKODE_ICON_URL.format(
-                    branch=curr_branch,
                     icon=soln.icon
                 )
 
