@@ -42,9 +42,11 @@ This README was generated using the following custom-built **Python** scripts: [
 |**271**|🟨 Medium|⚙️|[Encode And Decode Strings](https://lcid.cc/271)|<a href="java/lcm_p0271_encode_and_decode_strings.java"><img src="icons/java-original.svg" height="25"></a>|
 |**283**|🟩 Easy|⚙️|[Move Zeroes](https://lcid.cc/283)|<a href="python/lce_p0283_move_zeroes.py"><img src="icons/python-original.svg" height="25"></a>|
 |**347**|🟨 Medium|⚙️|[Top K Frequent Elements](https://lcid.cc/347)|<a href="java/lcm_p0347_top_k_frequent_elements.java"><img src="icons/java-original.svg" height="25"></a>|
+|**387**|🟩 Easy|⚙️|[First Unique Character String](https://lcid.cc/387)|<a href="python/lce_p0387_first_unique_character_string.py"><img src="icons/python-original.svg" height="25"></a>|
 |**389**|🟩 Easy|⚙️|[Find The Difference](https://lcid.cc/389)|<a href="python/lce_p0389_find_the_difference.py"><img src="icons/python-original.svg" height="25"></a>|
 |**459**|🟩 Easy|⚙️|[Repeated Substring Pattern](https://lcid.cc/459)|<a href="python/lce_p0459_repeated_substring_pattern.py"><img src="icons/python-original.svg" height="25"></a>|
 |**507**|🟩 Easy|⚙️|[Perfect Number](https://lcid.cc/507)|<a href="python/lce_p0507_perfect_number.py"><img src="icons/python-original.svg" height="25"></a>|
+|**509**|🟩 Easy|⚙️|[Fibonacci Number](https://lcid.cc/509)|<a href="python/lce_p0509_fibonacci_number.py"><img src="icons/python-original.svg" height="25"></a>|
 |**511**|🟩 Easy|🛢️|[Game Play Analysis I](https://lcid.cc/511)|<a href="sql/lce_p0511_game_play_analysis_i_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a> <a href="sql/lce_p0511_game_play_analysis_i_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a>|
 |**512**|🟩 Easy|🛢️|[Game Play Analysis II](https://lcid.cc/512)|<a href="sql/lce_p0512_game_play_analysis_ii_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a>|
 |**550**|🟨 Medium|🛢️|[Game Play Analysis IV](https://lcid.cc/550)|<a href="sql/lcm_p0550_game_play_analysis_iv_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
@@ -118,6 +120,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**1672**|🟩 Easy|⚙️|[Richest Customer Wealth](https://lcid.cc/1672)|<a href="python/lce_p1672_richest_customer_wealth.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1683**|🟩 Easy|🛢️|[Invalid Tweets](https://lcid.cc/1683)|<a href="sql/lce_p1683_invalid_tweets_sqlserver.sql"><img src="icons/sqlserver-original.svg" height="25"></a>|
 |**1693**|🟩 Easy|🛢️|[Daily Leads And Partners](https://lcid.cc/1693)|<a href="sql/lce_p1693_daily_leads_and_partners_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
+|**1700**|🟩 Easy|⚙️|[Number Of Students Unable To Eat Lunch](https://lcid.cc/1700)|<a href="python/lce_p1700_number_of_students_unable_to_eat_lunch.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1720**|🟩 Easy|⚙️|[Decode Xored Array](https://lcid.cc/1720)|<a href="python/lce_p1720_decode_xored_array.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1726**|🟨 Medium|⚙️|[Tuple With Same Product](https://lcid.cc/1726)|<a href="python/lcm_p1726_tuple_with_same_product.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1729**|🟩 Easy|🛢️|[Find Followers Count](https://lcid.cc/1729)|<a href="sql/lce_p1729_find_followers_count_sqlserver.sql"><img src="icons/sqlserver-original.svg" height="25"></a>|
@@ -131,6 +134,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**1789**|🟩 Easy|🛢️|[Primary Department For Each Employee](https://lcid.cc/1789)|<a href="sql/lce_p1789_primary_department_for_each_employee_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1790**|🟩 Easy|⚙️|[Check If One String Swap Can Make Strings Equal](https://lcid.cc/1790)|<a href="python/lce_p1790_check_if_one_string_swap_can_make_strings_equal.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1795**|🟩 Easy|🛢️|[Rearrange Products Table](https://lcid.cc/1795)|<a href="sql/lce_p1795_rearrange_products_table_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
+|**1796**|🟩 Easy|⚙️|[Second Largest Digit String](https://lcid.cc/1796)|<a href="python/lce_p1796_second_largest_digit_string.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1800**|🟩 Easy|⚙️|[Maximum Ascending Subarray Sum](https://lcid.cc/1800)|<a href="python/lce_p1800_maximum_ascending_subarray_sum.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1822**|🟩 Easy|⚙️|[Sign Of The Product Of An Array](https://lcid.cc/1822)|<a href="python/lce_p1822_sign_of_the_product_of_an_array.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1829**|🟨 Medium|⚙️|[Maximum Xor For Each Query](https://lcid.cc/1829)|<a href="java/lcm_p1829_maximum_xor_for_each_query.java"><img src="icons/java-original.svg" height="25"></a>|
@@ -147,6 +151,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**1978**|🟩 Easy|🛢️|[Employees Whose Manager Left The Company](https://lcid.cc/1978)|<a href="sql/lce_p1978_employees_whose_manager_left_the_company_sqlserver.sql"><img src="icons/sqlserver-original.svg" height="25"></a>|
 |**1995**|🟩 Easy|⚙️|[Count Special Quadruplets](https://lcid.cc/1995)|<a href="python/lce_p1995_count_special_quadruplets.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2042**|🟩 Easy|⚙️|[Check If Numbers Are Ascending In A Sentence](https://lcid.cc/2042)|<a href="python/lce_p2042_check_if_numbers_are_ascending_in_a_sentence.py"><img src="icons/python-original.svg" height="25"></a>|
+|**2073**|🟩 Easy|⚙️|[Time Needed To Buy Tickets](https://lcid.cc/2073)|<a href="python/lce_p2073_time_needed_to_buy_tickets.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2109**|🟨 Medium|⚙️|[Adding Spaces To A String](https://lcid.cc/2109)|<a href="java/lcm_p2109_adding_spaces_to_a_string.java"><img src="icons/java-original.svg" height="25"></a>|
 |**2124**|🟩 Easy|⚙️|[Check If All As Appears Before All Bs](https://lcid.cc/2124)|<a href="python/lce_p2124_check_if_all_as_appears_before_all_bs.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2125**|🟨 Medium|⚙️|[Number Of Laser Beams In A Bank](https://lcid.cc/2125)|<a href="python/lcm_p2125_number_of_laser_beams_in_a_bank.py"><img src="icons/python-original.svg" height="25"></a>|
@@ -157,6 +162,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**2364**|🟨 Medium|⚙️|[Count Number Of Bad Pairs](https://lcid.cc/2364)|<a href="python/lcm_p2364_count_number_of_bad_pairs.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2391**|🟨 Medium|⚙️|[Minimum Amount Of Time To Collect Garbage](https://lcid.cc/2391)|<a href="python/lcm_p2391_minimum_amount_of_time_to_collect_garbage.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2393**|🟨 Medium|⚙️|[Count Strictly Increasing Subarrays](https://lcid.cc/2393)|<a href="python/lcm_p2393_count_strictly_increasing_subarrays.py"><img src="icons/python-original.svg" height="25"></a>|
+|**2427**|🟩 Easy|⚙️|[Number Of Common Factors](https://lcid.cc/2427)|<a href="python/lce_p2427_number_of_common_factors.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2475**|🟩 Easy|⚙️|[Number Of Unequal Triplets In Array](https://lcid.cc/2475)|<a href="python/lce_p2475_number_of_unequal_triplets_in_array.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2485**|🟩 Easy|⚙️|[Find The Pivot Integer](https://lcid.cc/2485)|<a href="python/lce_p2485_find_the_pivot_integer.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2490**|🟩 Easy|⚙️|[Circular Sentence](https://lcid.cc/2490)|<a href="java/lce_p2490_circular_sentence.java"><img src="icons/java-original.svg" height="25"></a>|
@@ -185,10 +191,14 @@ This README was generated using the following custom-built **Python** scripts: [
 |**2725**|🟩 Easy|⚙️|[Interval Cancellation](https://lcid.cc/2725)|<a href="javascript/lce_p2725_interval_cancellation.js"><img src="icons/javascript-original.svg" height="25"></a>|
 |**2727**|🟩 Easy|⚙️|[Is Object Empty](https://lcid.cc/2727)|<a href="javascript/lce_p2727_is_object_empty.js"><img src="icons/javascript-original.svg" height="25"></a>|
 |**2728**|🟩 Easy|⚙️|[Count Houses In A Circular Street](https://lcid.cc/2728)|<a href="python/lce_p2728_count_houses_in_a_circular_street.py"><img src="icons/python-original.svg" height="25"></a>|
+|**2769**|🟩 Easy|⚙️|[Find The Maximum Achievable Number](https://lcid.cc/2769)|<a href="python/lce_p2769_find_the_maximum_achievable_number.py"><img src="icons/python-original.svg" height="25"></a>|
+|**2879**|🟩 Easy|⚙️|[Display The First Three Rows Pandas](https://lcid.cc/2879)|<a href="python/lce_p2879_display_the_first_three_rows_pandas.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2914**|🟨 Medium|⚙️|[Minimum Number Of Changes To Make Binary String Beautiful](https://lcid.cc/2914)|<a href="java/lcm_p2914_minimum_number_of_changes_to_make_binary_string_beautiful.java"><img src="icons/java-original.svg" height="25"></a>|
+|**2974**|🟩 Easy|⚙️|[Minimum Number Game](https://lcid.cc/2974)|<a href="python/lce_p2974_minimum_number_game.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3014**|🟩 Easy|⚙️|[Minimum Number Of Pushes To Type Word I](https://lcid.cc/3014)|<a href="java/lce_p3014_minimum_number_of_pushes_to_type_word_i.java"><img src="icons/java-original.svg" height="25"></a>|
 |**3016**|🟨 Medium|⚙️|[Minimum Number Of Pushes To Type Word II](https://lcid.cc/3016)|<a href="java/lcm_p3016_minimum_number_of_pushes_to_type_word_ii.java"><img src="icons/java-original.svg" height="25"></a>|
 |**3032**|🟩 Easy|⚙️|[Count Numbers With Unique Digits II](https://lcid.cc/3032)|<a href="python/lce_p3032_count_numbers_with_unique_digits_ii.py"><img src="icons/python-original.svg" height="25"></a>|
+|**3065**|🟩 Easy|⚙️|[Minimum Operations To Exceed Threshold Value I](https://lcid.cc/3065)|<a href="python/lce_p3065_minimum_operations_to_exceed_threshold_value_i.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3066**|🟨 Medium|⚙️|[Minimum Operations To Exceed Threshold Value II](https://lcid.cc/3066)|<a href="python/lcm_p3066_minimum_operations_to_exceed_threshold_value_ii.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3105**|🟩 Easy|⚙️|[Longest Strictly Increasing Or Strictly Decreasing Subarray](https://lcid.cc/3105)|<a href="python/lce_p3105_longest_strictly_increasing_or_strictly_decreasing_subarray.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3110**|🟩 Easy|⚙️|[Score Of A String](https://lcid.cc/3110)|<a href="python/lce_p3110_score_of_a_string.py"><img src="icons/python-original.svg" height="25"></a>|
