@@ -20,16 +20,16 @@ Topics:
 
 class Solution:
 
-    # Time Complexity: O(m + n) - 35 ms -> 76.65%
-    # Space Complexity: O(m + n) - 17.88 MB -> 33.47%
+    # Time Complexity: O(max(m, n)) - 28 ms -> 97.08%
+    # Space Complexity: O(m + n) - 17.76 MB -> 49.41%
     def mergeAlternately(self, word1: str, word2: str) -> str:
         merged = []
 
         len_w1 = len(word1)
         len_w2 = len(word2)
-        len_comb = len(word1) + len(word2)
+        max_len = max(len_w1, len_w2)
 
-        for i in range(len_comb):
+        for i in range(max_len):
             if i < len_w1:
                 merged.append(word1[i])
 
@@ -38,7 +38,7 @@ class Solution:
 
         return "".join(merged)
 
-    # Time Complexity: O(m + n) - 34 ms -> 81.88%
+    # Time Complexity: O(max(m, n)) - 34 ms -> 81.88%
     # Space Complexity: O(m + n) - 17.85 MB -> 33.47%
     def mergeAlternately(self, word1: str, word2: str) -> str:
         merged = []
