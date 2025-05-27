@@ -1,8 +1,6 @@
-name: Auto-update README after merge to main
+name: Auto-update README after push to main
 
 on:
-  workflow_dispatch:
-
   push:
     branches:
       - "main"
@@ -64,6 +62,7 @@ jobs:
             git config user.name $GIT_USERNAME
             git config user.email $GIT_EMAIL
             git commit -m "[auto] Update README after merge to main (R.N: ${{ github.run_number }})" \
+                      -m "Push commit: ${{ github.sha }} "
                       -m "Files moved: ${{ steps.move_step.outputs.files_moved }}" \
                       -m "Workflow: ${{ github.workflow }}" \
                       -m "Triggered on: ${{ github.event_name }}" \
