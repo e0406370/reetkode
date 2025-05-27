@@ -28,6 +28,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**77**|🟨 Medium|⚙️|[Combinations](https://lcid.cc/77)|<a href="java/lcm_p0077_combinations.java"><img src="icons/java-original.svg" height="25"></a>|
 |**128**|🟨 Medium|⚙️|[Longest Consecutive Sequence](https://lcid.cc/128)|<a href="java/lcm_p0128_longest_consecutive_sequence.java"><img src="icons/java-original.svg" height="25"></a>|
 |**136**|🟩 Easy|⚙️|[Single Number](https://lcid.cc/136)|<a href="java/lce_p0136_single_number.java"><img src="icons/java-original.svg" height="25"></a>|
+|**151**|🟨 Medium|⚙️|[Reverse Words In A String](https://lcid.cc/151)|<a href="python/lcm_p0151_reverse_words_in_a_string.py"><img src="icons/python-original.svg" height="25"></a>|
 |**175**|🟩 Easy|🛢️|[Combine Two Tables](https://lcid.cc/175)|<a href="sql/lce_p0175_combine_two_tables_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a> <a href="sql/lce_p0175_combine_two_tables_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a>|
 |**176**|🟨 Medium|🛢️|[Second Highest Salary](https://lcid.cc/176)|<a href="sql/lcm_p0176_second_highest_salary_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**178**|🟨 Medium|🛢️|[Rank Scores](https://lcid.cc/178)|<a href="sql/lcm_p0178_rank_scores_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
@@ -40,13 +41,16 @@ This README was generated using the following custom-built **Python** scripts: [
 |**196**|🟩 Easy|🛢️|[Delete Duplicate Emails](https://lcid.cc/196)|<a href="sql/lce_p0196_delete_duplicate_emails_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a> <a href="sql/lce_p0196_delete_duplicate_emails_sqlserver.sql"><img src="icons/sqlserver-original.svg" height="25"></a>|
 |**197**|🟩 Easy|🛢️|[Rising Temperature](https://lcid.cc/197)|<a href="sql/lce_p0197_rising_temperature_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a> <a href="sql/lce_p0197_rising_temperature_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a>|
 |**217**|🟩 Easy|⚙️|[Contains Duplicate](https://lcid.cc/217)|<a href="java/lce_p0217_contains_duplicate.java"><img src="icons/java-original.svg" height="25"></a>|
-|**238**|🟨 Medium|⚙️|[Product Of Array Except Self](https://lcid.cc/238)|<a href="java/lcm_p0238_product_of_array_except_self.java"><img src="icons/java-original.svg" height="25"></a>|
+|**238**|🟨 Medium|⚙️|[Product Of Array Except Self](https://lcid.cc/238)|<a href="java/lcm_p0238_product_of_array_except_self.java"><img src="icons/java-original.svg" height="25"></a> <a href="python/lcm_p0238_product_of_array_except_self.py"><img src="icons/python-original.svg" height="25"></a>|
 |**242**|🟩 Easy|⚙️|[Valid Anagram](https://lcid.cc/242)|<a href="java/lce_p0242_valid_anagram.java"><img src="icons/java-original.svg" height="25"></a> <a href="python/lce_p0242_valid_anagram.py"><img src="icons/python-original.svg" height="25"></a>|
 |**271**|🟨 Medium|⚙️|[Encode And Decode Strings](https://lcid.cc/271)|<a href="java/lcm_p0271_encode_and_decode_strings.java"><img src="icons/java-original.svg" height="25"></a>|
 |**283**|🟩 Easy|⚙️|[Move Zeroes](https://lcid.cc/283)|<a href="python/lce_p0283_move_zeroes.py"><img src="icons/python-original.svg" height="25"></a>|
+|**334**|🟨 Medium|⚙️|[Increasing Triplet Subsequence](https://lcid.cc/334)|<a href="python/lcm_p0334_increasing_triplet_subsequence.py"><img src="icons/python-original.svg" height="25"></a>|
+|**345**|🟩 Easy|⚙️|[Reverse Vowels Of A String](https://lcid.cc/345)|<a href="python/lce_p0345_reverse_vowels_of_a_string.py"><img src="icons/python-original.svg" height="25"></a>|
 |**347**|🟨 Medium|⚙️|[Top K Frequent Elements](https://lcid.cc/347)|<a href="java/lcm_p0347_top_k_frequent_elements.java"><img src="icons/java-original.svg" height="25"></a>|
 |**387**|🟩 Easy|⚙️|[First Unique Character String](https://lcid.cc/387)|<a href="python/lce_p0387_first_unique_character_string.py"><img src="icons/python-original.svg" height="25"></a>|
 |**389**|🟩 Easy|⚙️|[Find The Difference](https://lcid.cc/389)|<a href="python/lce_p0389_find_the_difference.py"><img src="icons/python-original.svg" height="25"></a>|
+|**443**|🟨 Medium|⚙️|[String Compression](https://lcid.cc/443)|<a href="python/lcm_p0443_string_compression.py"><img src="icons/python-original.svg" height="25"></a>|
 |**459**|🟩 Easy|⚙️|[Repeated Substring Pattern](https://lcid.cc/459)|<a href="python/lce_p0459_repeated_substring_pattern.py"><img src="icons/python-original.svg" height="25"></a>|
 |**507**|🟩 Easy|⚙️|[Perfect Number](https://lcid.cc/507)|<a href="python/lce_p0507_perfect_number.py"><img src="icons/python-original.svg" height="25"></a>|
 |**509**|🟩 Easy|⚙️|[Fibonacci Number](https://lcid.cc/509)|<a href="python/lce_p0509_fibonacci_number.py"><img src="icons/python-original.svg" height="25"></a>|
@@ -78,6 +82,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**1068**|🟩 Easy|🛢️|[Product Sales Analysis I](https://lcid.cc/1068)|<a href="sql/lce_p1068_product_sales_analysis_i_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a> <a href="sql/lce_p1068_product_sales_analysis_i_sqlserver.sql"><img src="icons/sqlserver-original.svg" height="25"></a>|
 |**1069**|🟩 Easy|🛢️|[Product Sales Analysis II](https://lcid.cc/1069)|<a href="sql/lce_p1069_product_sales_analysis_ii_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a>|
 |**1070**|🟨 Medium|🛢️|[Product Sales Analysis III](https://lcid.cc/1070)|<a href="sql/lcm_p1070_product_sales_analysis_iii_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
+|**1071**|🟩 Easy|⚙️|[Greatest Common Divisor Of Strings](https://lcid.cc/1071)|<a href="python/lce_p1071_greatest_common_divisor_of_strings.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1075**|🟩 Easy|🛢️|[Project Employees I](https://lcid.cc/1075)|<a href="sql/lce_p1075_project_employees_i_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a> <a href="sql/lce_p1075_project_employees_i_sqlserver.sql"><img src="icons/sqlserver-original.svg" height="25"></a>|
 |**1082**|🟩 Easy|🛢️|[Sales Analysis I](https://lcid.cc/1082)|<a href="sql/lce_p1082_sales_analysis_i_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a>|
 |**1083**|🟩 Easy|🛢️|[Sales Analysis II](https://lcid.cc/1083)|<a href="sql/lce_p1083_sales_analysis_ii_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a>|
@@ -103,6 +108,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**1378**|🟩 Easy|🛢️|[Replace Employee Id With The Unique Identifier](https://lcid.cc/1378)|<a href="sql/lce_p1378_replace_employee_id_with_the_unique_identifier_sqlserver.sql"><img src="icons/sqlserver-original.svg" height="25"></a>|
 |**1393**|🟨 Medium|🛢️|[Capital Gain Loss](https://lcid.cc/1393)|<a href="sql/lcm_p1393_capital_gain_loss_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1407**|🟩 Easy|🛢️|[Top Travellers](https://lcid.cc/1407)|<a href="sql/lce_p1407_top_travellers_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
+|**1431**|🟩 Easy|⚙️|[Kids With The Greatest Number Of Candies](https://lcid.cc/1431)|<a href="python/lce_p1431_kids_with_the_greatest_number_of_candies.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1455**|🟩 Easy|⚙️|[Check If A Word Occurs As A Prefix Of Any Word In A Sentence](https://lcid.cc/1455)|<a href="java/lce_p1455_check_if_a_word_occurs_as_a_prefix_of_any_word_in_a_sentence.java"><img src="icons/java-original.svg" height="25"></a>|
 |**1484**|🟩 Easy|🛢️|[Group Sold Products By The Date](https://lcid.cc/1484)|<a href="sql/lce_p1484_group_sold_products_by_the_date_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1491**|🟩 Easy|⚙️|[Average Salary Excluding The Minimum And Maximum Salary](https://lcid.cc/1491)|<a href="python/lce_p1491_average_salary_excluding_the_minimum_and_maximum_salary.py"><img src="icons/python-original.svg" height="25"></a>|
@@ -209,6 +215,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**3160**|🟨 Medium|⚙️|[Find The Number Of Distinct Colors Among The Balls](https://lcid.cc/3160)|<a href="python/lcm_p3160_find_the_number_of_distinct_colors_among_the_balls.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3162**|🟩 Easy|⚙️|[Find The Number Of Good Pairs I](https://lcid.cc/3162)|<a href="python/lce_p3162_find_the_number_of_good_pairs_i.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3163**|🟨 Medium|⚙️|[String Compression III](https://lcid.cc/3163)|<a href="java/lcm_p3163_string_compression_iii.java"><img src="icons/java-original.svg" height="25"></a>|
+|**3173**|🟩 Easy|⚙️|[Bitwise Or Of Adjacent Elements](https://lcid.cc/3173)|<a href="python/lce_p3173_bitwise_or_of_adjacent_elements.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3174**|🟩 Easy|⚙️|[Clear Digits](https://lcid.cc/3174)|<a href="python/lce_p3174_clear_digits.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3220**|🟨 Medium|🛢️|[Odd And Even Transactions](https://lcid.cc/3220)|<a href="sql/lcm_p3220_odd_and_even_transactions_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**3223**|🟨 Medium|⚙️|[Minimum Length Of String After Operations](https://lcid.cc/3223)|<a href="python/lcm_p3223_minimum_length_of_string_after_operations.py"><img src="icons/python-original.svg" height="25"></a>|
@@ -219,10 +226,12 @@ This README was generated using the following custom-built **Python** scripts: [
 |**3452**|🟩 Easy|⚙️|[Sum Of Good Numbers](https://lcid.cc/3452)|<a href="python/lce_p3452_sum_of_good_numbers.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3461**|🟩 Easy|⚙️|[Check If Digits Are Equal In String After Operations I](https://lcid.cc/3461)|<a href="python/lce_p3461_check_if_digits_are_equal_in_string_after_operations_i.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3467**|🟩 Easy|⚙️|[Transform Array By Parity](https://lcid.cc/3467)|<a href="python/lce_p3467_transform_array_by_parity.py"><img src="icons/python-original.svg" height="25"></a>|
+|**3491**|🟩 Easy|⚙️|[Phone Number Prefix](https://lcid.cc/3491)|<a href="python/lce_p3491_phone_number_prefix.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3492**|🟩 Easy|⚙️|[Maximum Containers On A Ship](https://lcid.cc/3492)|<a href="python/lce_p3492_maximum_containers_on_a_ship.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3498**|🟩 Easy|⚙️|[Reverse Degree Of A String](https://lcid.cc/3498)|<a href="python/lce_p3498_reverse_degree_of_a_string.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3512**|🟩 Easy|⚙️|[Minimum Operations To Make Array Sum Divisible By K](https://lcid.cc/3512)|<a href="python/lce_p3512_minimum_operations_to_make_array_sum_divisible_by_k.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3527**|🟨 Medium|⚙️|[Find The Most Common Response](https://lcid.cc/3527)|<a href="python/lcm_p3527_find_the_most_common_response.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3536**|🟩 Easy|⚙️|[Maximum Product Of Two Digits](https://lcid.cc/3536)|<a href="python/lce_p3536_maximum_product_of_two_digits.py"><img src="icons/python-original.svg" height="25"></a>|
 |**3541**|🟩 Easy|⚙️|[Find Most Frequent Vowel And Consonant](https://lcid.cc/3541)|<a href="python/lce_p3541_find_most_frequent_vowel_and_consonant.py"><img src="icons/python-original.svg" height="25"></a>|
+|**3550**|🟩 Easy|⚙️|[Smallest Index With Digit Sum Equal To Index](https://lcid.cc/3550)|<a href="python/lce_p3550_smallest_index_with_digit_sum_equal_to_index.py"><img src="icons/python-original.svg" height="25"></a>|
   
