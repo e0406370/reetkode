@@ -1,4 +1,4 @@
-name: Auto-update README after merging into main branch
+name: Auto-update README after merge to main
 
 on:
   pull_request:
