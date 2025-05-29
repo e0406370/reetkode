@@ -1,6 +1,11 @@
-name: Auto-update README after push to main
+name: Auto-update README after merge to main
 
 on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - "main"
+
   push:
     branches:
       - "main"
@@ -26,9 +31,10 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-${{ hashFiles('.github/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('.github/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
+            ${{ runner.os }}-
 
       - name: Install pip dependencies
         run: pip install -r ./.github/requirements.txt
@@ -48,15 +54,15 @@ jobs:
           python ./scripts/lc_markdown.py
 
       - name: Check for changed files
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
         run: git status
 
       - name: Stage changed files
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
         run: git add .
 
       - name: Commit changed files
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
         run: |
           if ! git diff --cached --quiet; then
             git config user.name $GIT_USERNAME
@@ -72,5 +78,5 @@ jobs:
           fi
 
       - name: Push code to main branch
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
         run: git push origin main

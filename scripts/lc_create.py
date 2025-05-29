@@ -12,7 +12,7 @@ def create_leetcode(filetype: str, difficulty: str, title: str) -> None:
     try:
         tokens = title.split(".")
         number = tokens[0].zfill(4)
-        text = tokens[1].strip()
+        text = tokens[1].replace(':', '').strip()
 
         name = f"lc{difficulty[0]}_p{number}_{text.replace(' ', '_').lower()}"
 
