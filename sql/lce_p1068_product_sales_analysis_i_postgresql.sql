@@ -38,3 +38,20 @@
 SELECT p.product_name, s.year, s.price
 FROM Sales s INNER JOIN Product p
 USING (product_id)
+
+/* 
+  ref: https://www.postgresql.org/docs/current/queries-table-expressions.html
+  
+  - INNER JOIN
+  For each row R1 of T1, the joined table has a row for each row in T2 that satisfies the join condition with R1.
+
+  - LEFT (OUTER) JOIN
+  First, an inner join is performed.
+  Then, for each row in T1 that does not satisfy the join condition with any row in T2, 
+  a joined row is added with null values in columns of T2. Thus, the joined table always has at least one row for each row in T1.
+
+  - RIGHT (OUTER) JOIN
+  First, an inner join is performed.
+  Then, for each row in T2 that does not satisfy the join condition with any row in T1,
+  a joined row is added with null values in columns of T1. This is the converse of a left join: the result table will always have a row for each row in T2.
+*/

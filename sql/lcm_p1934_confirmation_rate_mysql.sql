@@ -37,7 +37,7 @@
   Return the result table in any order.
 */
 
-SELECT S.user_id, ROUND((SUM(IF(action = 'confirmed', action, 0)) / COUNT(IFNULL(C.action, 0))), 2) AS confirmation_rate
+SELECT S.user_id, ROUND((SUM(IF(C.action = 'confirmed', C.action, 0)) / COUNT(IFNULL(C.action, 0))), 2) AS confirmation_rate
 FROM Signups S
 LEFT JOIN Confirmations C ON S.user_id = C.user_id
 GROUP BY S.user_id

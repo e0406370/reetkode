@@ -27,7 +27,10 @@ WHERE conditions REGEXP '^DIAB1| DIAB1'
 
 /*
   - reference: https://www.geeksforgeeks.org/mysql-regular-expressions-regexp/
-  
+
   - ^ => marks start of string
-  - p1|p2|p3 => alternation; matches any of the patterns p1, p2, or p3 
+  - p1|p2|p3 => alternation; matches any of the patterns p1, p2, or p3
+
+  - In MySQL, REGEXP and RLIKE are synonymous operators used for performing regular expression matching. 
+  The primary difference between REGEXP and RLIKE is that REGEXP is the standard operator, while RLIKE is just an alias for it.
 */
