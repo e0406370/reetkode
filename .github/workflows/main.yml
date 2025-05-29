@@ -1,4 +1,4 @@
-name: Auto-update README after push to main
+name: Auto-update README after merging into main branch
 
 on:
   pull_request:
@@ -54,15 +54,15 @@ jobs:
           python ./scripts/lc_markdown.py
 
       - name: Check for changed files
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
         run: git status
 
       - name: Stage changed files
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
         run: git add .
 
       - name: Commit changed files
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
         run: |
           if ! git diff --cached --quiet; then
             git config user.name $GIT_USERNAME
@@ -78,5 +78,5 @@ jobs:
           fi
 
       - name: Push code to main branch
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
         run: git push origin main
