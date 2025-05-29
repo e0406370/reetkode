@@ -39,4 +39,7 @@ WHERE mail REGEXP '^[a-zA-Z][a-zA-Z0-9_.-]*@leetcode[.]com$'
   - $ => marks end of string
 
   - note: [.] is explicitly used as . itself matches any single character!
+
+ - In MySQL, REGEXP and RLIKE are synonymous operators used for performing regular expression matching. 
+  The primary difference between REGEXP and RLIKE is that REGEXP is the standard operator, while RLIKE is just an alias for it.
 */
