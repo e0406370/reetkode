@@ -3,7 +3,7 @@ REETKODE_ICON_URL = "icons/{icon}"
 REETKODE_CHART_URL = "lc_chart.png?"
 LEETCODE_PROBLEM_URL = "https://lcid.cc/{id}"
 
-IGNORED_DIRS = (".git", "icons", "scripts")
+IGNORED_DIRS = (".git", ".github", "icons", "scripts")
 ACCEPTED_FILETYPES_MAP = {
     ".c": "c",
     ".cpp": "cpp",

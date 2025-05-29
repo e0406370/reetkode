@@ -1,0 +1,82 @@
+name: Auto-update README after merge to main
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - "main"
+
+  push:
+    branches:
+      - "main"
+
+env:
+  GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
+  GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+
+jobs:
+  update_readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.13.2"
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('.github/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+            ${{ runner.os }}-
+
+      - name: Install pip dependencies
+        run: pip install -r ./.github/requirements.txt
+
+      - name: Move solution files to their respective folders via lc_move.py
+        id: move_step
+        run: |
+          export PYTHONPATH=$GITHUB_WORKSPACE
+          python ./scripts/lc_move.py | tee output.log
+          echo "files_moved=$(grep '\[END\]' output.log | grep -o '[0-9]\+')" >> $GITHUB_OUTPUT
+          rm output.log
+
+      - name: Update progress chart and README via lc_markdown.py
+        if: steps.move_step.outputs.files_moved != '0'
+        run: |
+          export PYTHONPATH=$GITHUB_WORKSPACE
+          python ./scripts/lc_markdown.py
+
+      - name: Check for changed files
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
+        run: git status
+
+      - name: Stage changed files
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
+        run: git add .
+
+      - name: Commit changed files
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
+        run: |
+          if ! git diff --cached --quiet; then
+            git config user.name $GIT_USERNAME
+            git config user.email $GIT_EMAIL
+            git commit -m "[auto] Update README after merge to main (R.N: ${{ github.run_number }})" \
+                      -m "Push commit: ${{ github.sha }} " \
+                      -m "Files moved: ${{ steps.move_step.outputs.files_moved }}" \
+                      -m "Workflow: ${{ github.workflow }}" \
+                      -m "Triggered on: ${{ github.event_name }}" \
+                      -m "Run Link: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Push code to main branch
+        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
+        run: git push origin main
