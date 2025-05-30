@@ -15,10 +15,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout source branch of current PR
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref}}
+
+      - name: Retrieve latest commit message
+        id: latest_commit
+        run: echo "message=$(git log -1 --pretty=format:%s)" >> $GITHUB_OUTPUT
+
+      - name: Stop workflow if latest commit is [auto]-based
+        if: contains(steps.latest_commit.outputs.message, '[auto]')
+        run: |
+          echo "Latest commit is [auto]-based, stopping workflow..."
+          exit 0
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -60,7 +70,7 @@ jobs:
         run: git add .
 
       - name: Commit changed files
-        if: steps.move_step.outputs.files_moved != '0' 
+        if: steps.move_step.outputs.files_moved != '0'
         run: |
           if ! git diff --cached --quiet; then
             git config user.name $GIT_USERNAME
