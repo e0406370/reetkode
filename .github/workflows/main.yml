@@ -1,12 +1,8 @@
-name: Auto-update README after merge to main
+name: Auto-update README and move newly added solution files during PR checks
 
 on:
   pull_request:
     types: [opened, reopened, synchronize]
-    branches:
-      - "main"
-
-  push:
     branches:
       - "main"
 
@@ -54,20 +50,20 @@ jobs:
           python ./scripts/lc_markdown.py
 
       - name: Check for changed files
-        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
+        if: steps.move_step.outputs.files_moved != '0'
         run: git status
 
       - name: Stage changed files
-        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
+        if: steps.move_step.outputs.files_moved != '0'
         run: git add .
 
       - name: Commit changed files
-        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
+        if: steps.move_step.outputs.files_moved != '0' 
         run: |
           if ! git diff --cached --quiet; then
             git config user.name $GIT_USERNAME
             git config user.email $GIT_EMAIL
-            git commit -m "[auto] Update README after merge to main (R.N: ${{ github.run_number }})" \
+            git commit -m "[auto] Update README and move solution files (R.N: ${{ github.run_number }})" \
                       -m "Push commit: ${{ github.sha }} " \
                       -m "Files moved: ${{ steps.move_step.outputs.files_moved }}" \
                       -m "Workflow: ${{ github.workflow }}" \
@@ -77,6 +73,6 @@ jobs:
             echo "No changes to commit"
           fi
 
-      - name: Push code to main branch
-        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
-        run: git push https://x-access-token:${{ secrets.GIT_PAT }}@github.com/${{ github.repository }}.git HEAD:main
+      - name: Push updated README and moved solution files to feature branch
+        if: steps.move_step.outputs.files_moved != '0'
+        run: git push origin ${{ github.head_ref }}
