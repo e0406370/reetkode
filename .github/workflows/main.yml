@@ -79,4 +79,4 @@ jobs:
 
       - name: Push code to main branch
         if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
-        run: git push origin main
+        run: git push https://x-access-token:${{ secrets.GIT_PAT }}@github.com/${{ github.repository }}.git HEAD:main
