@@ -74,12 +74,11 @@ def retrieve_data() -> dict[int, list[LCSolution]]:
                 title_tokens.pop()
                 title_tokens_len -= 1
 
-            if title_tokens[-1] in lcc.ROMAN_SUFFIXES:
-                title_tokens[-1] = title_tokens[-1].upper()
-                title_tokens_len -= 1
-
             for i in range(title_tokens_len):
-                title_tokens[i] = title_tokens[i].capitalize()
+                if title_tokens[i] in lcc.ROMAN_SUFFIXES:
+                    title_tokens[i] = title_tokens[i].upper()
+                else:
+                    title_tokens[i] = title_tokens[i].capitalize()
 
             title = f"{' '.join(title_tokens)}"
 
