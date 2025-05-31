@@ -30,14 +30,6 @@ jobs:
             echo "should_skip=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Touch PR to trigger synchronize event if skipped
-        if: steps.latest_commit.outputs.should_skip == 'true'
-        run: |
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.GIT_PAT }}" \
-            -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/update-branch
-
       - name: Setup Python
         if: steps.latest_commit.outputs.should_skip == 'false'
         uses: actions/setup-python@v4
@@ -103,3 +95,10 @@ jobs:
         with:
           github_token: ${{ secrets.GIT_PAT }}
           branch: ${{ github.head_ref }}
+
+      - name: Touch PR to trigger synchronize event
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GIT_PAT }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/update-branch
