@@ -2,7 +2,7 @@ name: Auto-update README and move newly added solution files during PR checks
 
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, reopened, synchronize]
     branches:
       - "main"
 
@@ -20,22 +20,23 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Retrieve latest commit message
+      - name: Check if latest commit is [auto]-based
         id: latest_commit
-        run: echo "message=$(git log -1 --pretty=format:%s)" >> $GITHUB_OUTPUT
-
-      - name: Stop workflow if latest commit is [auto]-based
-        if: contains(steps.latest_commit.outputs.message, '[auto]')
         run: |
-          echo "Latest commit is [auto]-based, stopping workflow..."
-          exit 0
+          COMMIT_MSG="$(git log -1 --pretty=format:%s)"
+          if [[ "$COMMIT_MSG" == "[auto]*" ]]; then
+            echo "should_skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_skip=false" >> $GITHUB_OUTPUT
 
       - name: Setup Python
+        if: steps.latest_commit.outputs.should_skip == 'false'
         uses: actions/setup-python@v4
         with:
           python-version: "3.13.2"
 
       - name: Cache pip dependencies
+        if: steps.latest_commit.outputs.should_skip == 'false'
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
@@ -45,9 +46,11 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install pip dependencies
+        if: steps.latest_commit.outputs.should_skip == 'false'
         run: pip install -r ./.github/requirements.txt
 
       - name: Move solution files to their respective folders via lc_move.py
+        if: steps.latest_commit.outputs.should_skip == 'false'
         id: move_step
         run: |
           export PYTHONPATH=$GITHUB_WORKSPACE
@@ -56,21 +59,21 @@ jobs:
           rm output.log
 
       - name: Update progress chart and README via lc_markdown.py
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
         run: |
           export PYTHONPATH=$GITHUB_WORKSPACE
           python ./scripts/lc_markdown.py
 
       - name: Check for changed files
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
         run: git status
 
       - name: Stage changed files
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
         run: git add .
 
       - name: Commit changed files
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
         run: |
           if ! git diff --cached --quiet; then
             git config user.name $GIT_USERNAME
@@ -86,7 +89,8 @@ jobs:
           fi
 
       - name: Push updated README and moved solution files to feature branch
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
         uses: ad-m/github-push-action@master
         with:
+          github_token: ${{ secrets.GIT_PAT }}
           branch: ${{ github.head_ref }}
