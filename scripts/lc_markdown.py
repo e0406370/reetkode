@@ -103,8 +103,8 @@ def markdown_leetcode() -> None:
         readme_file.new_line(text="My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference. 😃")
         readme_file.new_line()
         readme_file.new_line(text=
-                             "This README was generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py). " +
-                             "The generation is maintained by a **GitHub Actions** [workflow](.github/workflows/main.yml) that automatically updates the content whenever new solution files are merged into the `main` branch."
+                             "This README is generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py), " +
+                             "as part of a **GitHub Actions** [workflow](.github/workflows/main.yml) which runs during checks within pull requests made to `main` branch, updating the content and organising solution files prior to merging."
                             )
         readme_file.new_line(text="***")
         readme_file.new_line()
