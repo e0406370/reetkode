@@ -6,6 +6,10 @@ on:
     branches:
       - "main"
 
+  push:
+    branches-ignore:
+      - "main"
+
 env:
   GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
   GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
