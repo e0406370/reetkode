@@ -28,6 +28,7 @@ jobs:
             echo "should_skip=true" >> $GITHUB_OUTPUT
           else
             echo "should_skip=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Setup Python
         if: steps.latest_commit.outputs.should_skip == 'false'
