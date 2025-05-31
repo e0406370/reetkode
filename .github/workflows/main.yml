@@ -18,7 +18,7 @@ jobs:
       - name: Checkout source branch of current PR
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.ref}}
+          ref: ${{ github.head_ref }}
 
       - name: Retrieve latest commit message
         id: latest_commit
@@ -87,4 +87,6 @@ jobs:
 
       - name: Push updated README and moved solution files to feature branch
         if: steps.move_step.outputs.files_moved != '0'
-        run: git push origin ${{ github.head_ref }}
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.head_ref }}
