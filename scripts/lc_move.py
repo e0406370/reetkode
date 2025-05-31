@@ -18,6 +18,7 @@ def move_leetcode() -> None:
             continue
 
         dest_dir = base_dir.joinpath(lcc.ACCEPTED_FILETYPES_MAP[filetype])
+        dest_dir.mkdir(exist_ok=True)
 
         try:
             shutil.move(src=file, dst=dest_dir / file.name)
