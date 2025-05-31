@@ -19,7 +19,7 @@ This README was generated using the following custom-built **Python** scripts: [
 |**17**|🟨 Medium|⚙️|[Letter Combinations Of A Phone Number](https://lcid.cc/17)|<a href="java/lcm_p0017_letter_combinations_of_a_phone_number.java"><img src="icons/java-original.svg" height="25"></a>|
 |**28**|🟩 Easy|⚙️|[Find The Index Of The First Occurrence In A String](https://lcid.cc/28)|<a href="python/lce_p0028_find_the_index_of_the_first_occurrence_in_a_string.py"><img src="icons/python-original.svg" height="25"></a>|
 |**36**|🟨 Medium|⚙️|[Valid Sudoku](https://lcid.cc/36)|<a href="java/lcm_p0036_valid_sudoku.java"><img src="icons/java-original.svg" height="25"></a>|
-|**46**|🟩 Easy|⚙️|[Test](https://lcid.cc/46)|<a href="java/lce_p0046_test.java"><img src="icons/java-original.svg" height="25"></a> <a href="java/lcm_p0046_permutations.java"><img src="icons/java-original.svg" height="25"></a>|
+|**46**|🟩 Easy|⚙️|[Test](https://lcid.cc/46)|<a href="java/lce_p0046_test.java"><img src="icons/java-original.svg" height="25"></a> <a href="java/lcm_p0046_permutations.java"><img src="icons/java-original.svg" height="25"></a> <a href="python/lce_p0046_test.py"><img src="icons/python-original.svg" height="25"></a>|
 |**49**|🟨 Medium|⚙️|[Group Anagrams](https://lcid.cc/49)|<a href="java/lcm_p0049_group_anagrams.java"><img src="icons/java-original.svg" height="25"></a>|
 |**50**|🟨 Medium|⚙️|[Pow X N](https://lcid.cc/50)|<a href="typescript/lcm_p0050_pow_x_n.ts"><img src="icons/typescript-original.svg" height="25"></a>|
 |**58**|🟩 Easy|⚙️|[Length Of Last Word](https://lcid.cc/58)|<a href="python/lce_p0058_length_of_last_word.py"><img src="icons/python-original.svg" height="25"></a>|
