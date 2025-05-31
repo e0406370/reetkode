@@ -1,12 +1,8 @@
-name: Auto-update README after merge to main
+name: Auto-update README and move newly added solution files during PR checks
 
 on:
   pull_request:
     types: [opened, reopened, synchronize]
-    branches:
-      - "main"
-
-  push:
     branches:
       - "main"
 
@@ -19,15 +15,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout source branch of current PR
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GIT_PAT }}
+
+      - name: Check if latest commit is not [auto]-based before proceeding
+        id: latest_commit
+        run: |
+          COMMIT_MSG="$(git log -1 --pretty=format:%s)"
+
+          if [[ "$COMMIT_MSG" == '[auto]'* ]]; then
+            echo "Latest commit is [auto]-based, ending workflow..."
+            echo "should_skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "Latest commit is NOT [auto]-based, resuming workflow..."
+            echo "should_skip=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Setup Python
+        if: steps.latest_commit.outputs.should_skip == 'false'
         uses: actions/setup-python@v4
         with:
           python-version: "3.13.2"
 
       - name: Cache pip dependencies
+        if: steps.latest_commit.outputs.should_skip == 'false'
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
@@ -37,9 +51,11 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install pip dependencies
+        if: steps.latest_commit.outputs.should_skip == 'false'
         run: pip install -r ./.github/requirements.txt
 
       - name: Move solution files to their respective folders via lc_move.py
+        if: steps.latest_commit.outputs.should_skip == 'false'
         id: move_step
         run: |
           export PYTHONPATH=$GITHUB_WORKSPACE
@@ -48,26 +64,26 @@ jobs:
           rm output.log
 
       - name: Update progress chart and README via lc_markdown.py
-        if: steps.move_step.outputs.files_moved != '0'
+        if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
         run: |
           export PYTHONPATH=$GITHUB_WORKSPACE
           python ./scripts/lc_markdown.py
 
       - name: Check for changed files
-        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
+        if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
         run: git status
 
       - name: Stage changed files
-        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
+        if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
         run: git add .
 
       - name: Commit changed files
-        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
+        if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
         run: |
           if ! git diff --cached --quiet; then
             git config user.name $GIT_USERNAME
             git config user.email $GIT_EMAIL
-            git commit -m "[auto] Update README after merge to main (R.N: ${{ github.run_number }})" \
+            git commit -m "[auto] Update README and move solution files (R.N: ${{ github.run_number }})" \
                       -m "Push commit: ${{ github.sha }} " \
                       -m "Files moved: ${{ steps.move_step.outputs.files_moved }}" \
                       -m "Workflow: ${{ github.workflow }}" \
@@ -77,6 +93,9 @@ jobs:
             echo "No changes to commit"
           fi
 
-      - name: Push code to main branch
-        if: steps.move_step.outputs.files_moved != '0' && github.event_name == 'push'
-        run: git push https://x-access-token:${{ secrets.GIT_PAT }}@github.com/${{ github.repository }}.git HEAD:main
+      - name: Push updated README and move solution files to source branch
+        if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GIT_PAT }}
+          branch: ${{ github.head_ref }}
