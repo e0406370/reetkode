@@ -57,4 +57,11 @@ class Solution:
   1. filtering for non-zero elements then extend the rest with zeroes
   2. two pointers: 1st ptr tracks the position where the next non-zero element should be placed, 2nd ptr iterates through array.
      when a non-zero element is found, it is moved to the 1st ptr position and eventually zeroes naturally shift to the end of the array.
+     
+     e.g. 
+     i = 0 lsnz = 0 => [0, 1, 0, 3, 12] 
+     i = 1 lsnz = 1 => [1, 0, 0, 3, 12]
+     i = 2 lsnz = 1 => [1, 0, 0, 3, 12]
+     i = 3 lsnz = 2 => [1, 3, 0, 0, 12]
+     i = 4 lsnz = 3 => [1, 3, 12, 0, 0]
 """

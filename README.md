@@ -15,6 +15,7 @@ This README is generated using the following custom-built **Python** scripts: [`
 | :--- | :--- | :--- | :--- | :--- |
 |**1**|🟩 Easy|⚙️|[Two Sum](https://lcid.cc/1)|<a href="java/lce_p0001_two_sum.java"><img src="icons/java-original.svg" height="25"></a>|
 |**3**|🟨 Medium|⚙️|[Longest Substring Without Repeating Characters](https://lcid.cc/3)|<a href="python/lcm_p0003_longest_substring_without_repeating_characters.py"><img src="icons/python-original.svg" height="25"></a>|
+|**11**|🟨 Medium|⚙️|[Container With Most Water](https://lcid.cc/11)|<a href="python/lcm_p0011_container_with_most_water.py"><img src="icons/python-original.svg" height="25"></a>|
 |**13**|🟩 Easy|⚙️|[Roman To Integer](https://lcid.cc/13)|<a href="python/lce_p0013_roman_to_integer.py"><img src="icons/python-original.svg" height="25"></a>|
 |**17**|🟨 Medium|⚙️|[Letter Combinations Of A Phone Number](https://lcid.cc/17)|<a href="java/lcm_p0017_letter_combinations_of_a_phone_number.java"><img src="icons/java-original.svg" height="25"></a>|
 |**28**|🟩 Easy|⚙️|[Find The Index Of The First Occurrence In A String](https://lcid.cc/28)|<a href="python/lce_p0028_find_the_index_of_the_first_occurrence_in_a_string.py"><img src="icons/python-original.svg" height="25"></a>|
@@ -50,6 +51,7 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**347**|🟨 Medium|⚙️|[Top K Frequent Elements](https://lcid.cc/347)|<a href="java/lcm_p0347_top_k_frequent_elements.java"><img src="icons/java-original.svg" height="25"></a>|
 |**387**|🟩 Easy|⚙️|[First Unique Character String](https://lcid.cc/387)|<a href="python/lce_p0387_first_unique_character_string.py"><img src="icons/python-original.svg" height="25"></a>|
 |**389**|🟩 Easy|⚙️|[Find The Difference](https://lcid.cc/389)|<a href="python/lce_p0389_find_the_difference.py"><img src="icons/python-original.svg" height="25"></a>|
+|**392**|🟩 Easy|⚙️|[Is Subsequence](https://lcid.cc/392)|<a href="python/lce_p0392_is_subsequence.py"><img src="icons/python-original.svg" height="25"></a>|
 |**443**|🟨 Medium|⚙️|[String Compression](https://lcid.cc/443)|<a href="python/lcm_p0443_string_compression.py"><img src="icons/python-original.svg" height="25"></a>|
 |**459**|🟩 Easy|⚙️|[Repeated Substring Pattern](https://lcid.cc/459)|<a href="python/lce_p0459_repeated_substring_pattern.py"><img src="icons/python-original.svg" height="25"></a>|
 |**507**|🟩 Easy|⚙️|[Perfect Number](https://lcid.cc/507)|<a href="python/lce_p0507_perfect_number.py"><img src="icons/python-original.svg" height="25"></a>|
@@ -74,6 +76,7 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**620**|🟩 Easy|🛢️|[Not Boring Movies](https://lcid.cc/620)|<a href="sql/lce_p0620_not_boring_movies_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a> <a href="sql/lce_p0620_not_boring_movies_sqlserver.sql"><img src="icons/sqlserver-original.svg" height="25"></a>|
 |**626**|🟨 Medium|🛢️|[Exchange Seats](https://lcid.cc/626)|<a href="sql/lcm_p0626_exchange_seats_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**627**|🟩 Easy|🛢️|[Swap Salary](https://lcid.cc/627)|<a href="sql/lce_p0627_swap_salary_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a> <a href="sql/lce_p0627_swap_salary_postgresql.sql"><img src="icons/postgresql-original.svg" height="25"></a>|
+|**643**|🟩 Easy|⚙️|[Maximum Average Subarray I](https://lcid.cc/643)|<a href="python/lce_p0643_maximum_average_subarray_i.py"><img src="icons/python-original.svg" height="25"></a>|
 |**657**|🟩 Easy|⚙️|[Robot Return To Origin](https://lcid.cc/657)|<a href="python/lce_p0657_robot_return_to_origin.py"><img src="icons/python-original.svg" height="25"></a>|
 |**682**|🟩 Easy|⚙️|[Baseball Game](https://lcid.cc/682)|<a href="java/lce_p0682_baseball_game.java"><img src="icons/java-original.svg" height="25"></a> <a href="python/lce_p0682_baseball_game.py"><img src="icons/python-original.svg" height="25"></a>|
 |**709**|🟩 Easy|⚙️|[To Lower Case](https://lcid.cc/709)|<a href="python/lce_p0709_to_lower_case.py"><img src="icons/python-original.svg" height="25"></a>|
@@ -101,6 +104,7 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**1180**|🟩 Easy|⚙️|[Count Substrings With Only One Distinct Letter](https://lcid.cc/1180)|<a href="python/lce_p1180_count_substrings_with_only_one_distinct_letter.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1193**|🟨 Medium|🛢️|[Monthly Transactions I](https://lcid.cc/1193)|<a href="sql/lcm_p1193_monthly_transactions_i_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1204**|🟨 Medium|🛢️|[Last Person To Fit In The Bus](https://lcid.cc/1204)|<a href="sql/lcm_p1204_last_person_to_fit_in_the_bus_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
+|**1207**|🟩 Easy|⚙️|[Unique Number Of Occurrences](https://lcid.cc/1207)|<a href="python/lce_p1207_unique_number_of_occurrences.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1211**|🟩 Easy|🛢️|[Queries Quality And Percentage](https://lcid.cc/1211)|<a href="sql/lce_p1211_queries_quality_and_percentage_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1232**|🟩 Easy|⚙️|[Check If It Is A Straight Line](https://lcid.cc/1232)|<a href="python/lce_p1232_check_if_it_is_a_straight_line.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1251**|🟩 Easy|🛢️|[Average Selling Price](https://lcid.cc/1251)|<a href="sql/lce_p1251_average_selling_price_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
@@ -115,6 +119,7 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**1407**|🟩 Easy|🛢️|[Top Travellers](https://lcid.cc/1407)|<a href="sql/lce_p1407_top_travellers_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1431**|🟩 Easy|⚙️|[Kids With The Greatest Number Of Candies](https://lcid.cc/1431)|<a href="python/lce_p1431_kids_with_the_greatest_number_of_candies.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1455**|🟩 Easy|⚙️|[Check If A Word Occurs As A Prefix Of Any Word In A Sentence](https://lcid.cc/1455)|<a href="java/lce_p1455_check_if_a_word_occurs_as_a_prefix_of_any_word_in_a_sentence.java"><img src="icons/java-original.svg" height="25"></a>|
+|**1456**|🟨 Medium|⚙️|[Maximum Number Of Vowels In A Substring Of Given Length](https://lcid.cc/1456)|<a href="python/lcm_p1456_maximum_number_of_vowels_in_a_substring_of_given_length.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1484**|🟩 Easy|🛢️|[Group Sold Products By The Date](https://lcid.cc/1484)|<a href="sql/lce_p1484_group_sold_products_by_the_date_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1491**|🟩 Easy|⚙️|[Average Salary Excluding The Minimum And Maximum Salary](https://lcid.cc/1491)|<a href="python/lce_p1491_average_salary_excluding_the_minimum_and_maximum_salary.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1502**|🟩 Easy|⚙️|[Can Make Arithmetic Progression From Sequence](https://lcid.cc/1502)|<a href="python/lce_p1502_can_make_arithmetic_progression_from_sequence.py"><img src="icons/python-original.svg" height="25"></a>|
@@ -132,6 +137,7 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**1661**|🟩 Easy|🛢️|[Average Time Of Process Per Machine](https://lcid.cc/1661)|<a href="sql/lce_p1661_average_time_of_process_per_machine_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1667**|🟩 Easy|🛢️|[Fix Names In A Table](https://lcid.cc/1667)|<a href="sql/lce_p1667_fix_names_in_a_table_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1672**|🟩 Easy|⚙️|[Richest Customer Wealth](https://lcid.cc/1672)|<a href="python/lce_p1672_richest_customer_wealth.py"><img src="icons/python-original.svg" height="25"></a>|
+|**1679**|🟨 Medium|⚙️|[Max Number Of K-sum Pairs](https://lcid.cc/1679)|<a href="python/lcm_p1679_max_number_of_k-sum_pairs.py"><img src="icons/python-original.svg" height="25"></a>|
 |**1683**|🟩 Easy|🛢️|[Invalid Tweets](https://lcid.cc/1683)|<a href="sql/lce_p1683_invalid_tweets_sqlserver.sql"><img src="icons/sqlserver-original.svg" height="25"></a>|
 |**1693**|🟩 Easy|🛢️|[Daily Leads And Partners](https://lcid.cc/1693)|<a href="sql/lce_p1693_daily_leads_and_partners_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**1700**|🟩 Easy|⚙️|[Number Of Students Unable To Eat Lunch](https://lcid.cc/1700)|<a href="python/lce_p1700_number_of_students_unable_to_eat_lunch.py"><img src="icons/python-original.svg" height="25"></a>|
@@ -169,9 +175,11 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**2109**|🟨 Medium|⚙️|[Adding Spaces To A String](https://lcid.cc/2109)|<a href="java/lcm_p2109_adding_spaces_to_a_string.java"><img src="icons/java-original.svg" height="25"></a>|
 |**2124**|🟩 Easy|⚙️|[Check If All As Appears Before All Bs](https://lcid.cc/2124)|<a href="python/lce_p2124_check_if_all_as_appears_before_all_bs.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2125**|🟨 Medium|⚙️|[Number Of Laser Beams In A Bank](https://lcid.cc/2125)|<a href="python/lcm_p2125_number_of_laser_beams_in_a_bank.py"><img src="icons/python-original.svg" height="25"></a>|
+|**2215**|🟩 Easy|⚙️|[Find The Difference Of Two Arrays](https://lcid.cc/2215)|<a href="python/lce_p2215_find_the_difference_of_two_arrays.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2283**|🟩 Easy|⚙️|[Check If Number Has Equal Digit Count And Digit Value](https://lcid.cc/2283)|<a href="python/lce_p2283_check_if_number_has_equal_digit_count_and_digit_value.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2342**|🟨 Medium|⚙️|[Max Sum Of A Pair With Equal Sum Of Digits](https://lcid.cc/2342)|<a href="python/lcm_p2342_max_sum_of_a_pair_with_equal_sum_of_digits.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2349**|🟨 Medium|⚙️|[Design A Number Container System](https://lcid.cc/2349)|<a href="python/lcm_p2349_design_a_number_container_system.py"><img src="icons/python-original.svg" height="25"></a>|
+|**2352**|🟨 Medium|⚙️|[Equal Row And Column Pairs](https://lcid.cc/2352)|<a href="python/lcm_p2352_equal_row_and_column_pairs.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2356**|🟩 Easy|🛢️|[Number Of Unique Subjects Taught By Each Teacher](https://lcid.cc/2356)|<a href="sql/lce_p2356_number_of_unique_subjects_taught_by_each_teacher_mysql.sql"><img src="icons/mysql-original.svg" height="25"></a>|
 |**2364**|🟨 Medium|⚙️|[Count Number Of Bad Pairs](https://lcid.cc/2364)|<a href="python/lcm_p2364_count_number_of_bad_pairs.py"><img src="icons/python-original.svg" height="25"></a>|
 |**2391**|🟨 Medium|⚙️|[Minimum Amount Of Time To Collect Garbage](https://lcid.cc/2391)|<a href="python/lcm_p2391_minimum_amount_of_time_to_collect_garbage.py"><img src="icons/python-original.svg" height="25"></a>|
