@@ -37,6 +37,7 @@ def stats_leetcode(display: bool = True) -> dict[str, dict[str, int]]:
 
             total_stats[language] = stats
 
+    total_stats = {k: total_stats[k] for k in sorted(total_stats)}
     total_stats[lcc.LEVEL_TOTAL] = {
         level: sum(stats[level] for stats in total_stats.values())
         for level in lcc.STATS_LEVELS
