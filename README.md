@@ -17,6 +17,7 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**3**|🟨 Medium|⚙️|[Longest Substring Without Repeating Characters](https://lcid.cc/3)|<a href="python/lcm_p0003_longest_substring_without_repeating_characters.py"><img src="icons/python-original.svg" height="25"></a>|
 |**11**|🟨 Medium|⚙️|[Container With Most Water](https://lcid.cc/11)|<a href="python/lcm_p0011_container_with_most_water.py"><img src="icons/python-original.svg" height="25"></a>|
 |**13**|🟩 Easy|⚙️|[Roman To Integer](https://lcid.cc/13)|<a href="python/lce_p0013_roman_to_integer.py"><img src="icons/python-original.svg" height="25"></a>|
+|**14**|🟩 Easy|⚙️|[Longest Common Prefix](https://lcid.cc/14)|<a href="java/lce_p0014_longest_common_prefix.java"><img src="icons/java-original.svg" height="25"></a>|
 |**17**|🟨 Medium|⚙️|[Letter Combinations Of A Phone Number](https://lcid.cc/17)|<a href="java/lcm_p0017_letter_combinations_of_a_phone_number.java"><img src="icons/java-original.svg" height="25"></a>|
 |**28**|🟩 Easy|⚙️|[Find The Index Of The First Occurrence In A String](https://lcid.cc/28)|<a href="python/lce_p0028_find_the_index_of_the_first_occurrence_in_a_string.py"><img src="icons/python-original.svg" height="25"></a>|
 |**36**|🟨 Medium|⚙️|[Valid Sudoku](https://lcid.cc/36)|<a href="java/lcm_p0036_valid_sudoku.java"><img src="icons/java-original.svg" height="25"></a>|
