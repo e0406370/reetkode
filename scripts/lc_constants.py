@@ -1,5 +1,5 @@
 REETKODE_SOLUTION_URL = "{folder}/{filename}"
-REETKODE_ICON_URL = "icons/{icon}"
+REETKODE_ICON_URL = ".github/icons/{icon}"
 REETKODE_CHART_URL = "lc_chart.png?"
 LEETCODE_PROBLEM_URL = "https://lcid.cc/{id}"
 
