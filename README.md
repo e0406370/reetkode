@@ -28,6 +28,7 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**66**|🟩 Easy|⚙️|[Plus One](https://lcid.cc/66)|<a href="python/lce_p0066_plus_one.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**73**|🟨 Medium|⚙️|[Set Matrix Zeroes](https://lcid.cc/73)|<a href="python/lcm_p0073_set_matrix_zeroes.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**77**|🟨 Medium|⚙️|[Combinations](https://lcid.cc/77)|<a href="java/lcm_p0077_combinations.java"><img src=".github/icons/java-original.svg" height="25"></a>|
+|**125**|🟩 Easy|⚙️|[Valid Palindrome](https://lcid.cc/125)|<a href="java/lce_p0125_valid_palindrome.java"><img src=".github/icons/java-original.svg" height="25"></a>|
 |**128**|🟨 Medium|⚙️|[Longest Consecutive Sequence](https://lcid.cc/128)|<a href="java/lcm_p0128_longest_consecutive_sequence.java"><img src=".github/icons/java-original.svg" height="25"></a>|
 |**136**|🟩 Easy|⚙️|[Single Number](https://lcid.cc/136)|<a href="java/lce_p0136_single_number.java"><img src=".github/icons/java-original.svg" height="25"></a>|
 |**151**|🟨 Medium|⚙️|[Reverse Words In A String](https://lcid.cc/151)|<a href="python/lcm_p0151_reverse_words_in_a_string.py"><img src=".github/icons/python-original.svg" height="25"></a>|
@@ -45,6 +46,7 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**217**|🟩 Easy|⚙️|[Contains Duplicate](https://lcid.cc/217)|<a href="java/lce_p0217_contains_duplicate.java"><img src=".github/icons/java-original.svg" height="25"></a>|
 |**238**|🟨 Medium|⚙️|[Product Of Array Except Self](https://lcid.cc/238)|<a href="java/lcm_p0238_product_of_array_except_self.java"><img src=".github/icons/java-original.svg" height="25"></a> <a href="python/lcm_p0238_product_of_array_except_self.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**242**|🟩 Easy|⚙️|[Valid Anagram](https://lcid.cc/242)|<a href="java/lce_p0242_valid_anagram.java"><img src=".github/icons/java-original.svg" height="25"></a> <a href="python/lce_p0242_valid_anagram.py"><img src=".github/icons/python-original.svg" height="25"></a>|
+|**268**|🟩 Easy|⚙️|[Missing Number](https://lcid.cc/268)|<a href="java/lce_p0268_missing_number.java"><img src=".github/icons/java-original.svg" height="25"></a>|
 |**271**|🟨 Medium|⚙️|[Encode And Decode Strings](https://lcid.cc/271)|<a href="java/lcm_p0271_encode_and_decode_strings.java"><img src=".github/icons/java-original.svg" height="25"></a>|
 |**283**|🟩 Easy|⚙️|[Move Zeroes](https://lcid.cc/283)|<a href="python/lce_p0283_move_zeroes.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**334**|🟨 Medium|⚙️|[Increasing Triplet Subsequence](https://lcid.cc/334)|<a href="python/lcm_p0334_increasing_triplet_subsequence.py"><img src=".github/icons/python-original.svg" height="25"></a>|
@@ -140,6 +142,7 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**1672**|🟩 Easy|⚙️|[Richest Customer Wealth](https://lcid.cc/1672)|<a href="python/lce_p1672_richest_customer_wealth.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**1679**|🟨 Medium|⚙️|[Max Number Of K-sum Pairs](https://lcid.cc/1679)|<a href="python/lcm_p1679_max_number_of_k-sum_pairs.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**1683**|🟩 Easy|🛢️|[Invalid Tweets](https://lcid.cc/1683)|<a href="sql/lce_p1683_invalid_tweets_sqlserver.sql"><img src=".github/icons/sqlserver-original.svg" height="25"></a>|
+|**1684**|🟩 Easy|⚙️|[Count The Number Of Consistent Strings](https://lcid.cc/1684)|<a href="java/lce_p1684_count_the_number_of_consistent_strings.java"><img src=".github/icons/java-original.svg" height="25"></a>|
 |**1693**|🟩 Easy|🛢️|[Daily Leads And Partners](https://lcid.cc/1693)|<a href="sql/lce_p1693_daily_leads_and_partners_mysql.sql"><img src=".github/icons/mysql-original.svg" height="25"></a>|
 |**1700**|🟩 Easy|⚙️|[Number Of Students Unable To Eat Lunch](https://lcid.cc/1700)|<a href="python/lce_p1700_number_of_students_unable_to_eat_lunch.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**1720**|🟩 Easy|⚙️|[Decode Xored Array](https://lcid.cc/1720)|<a href="python/lce_p1720_decode_xored_array.py"><img src=".github/icons/python-original.svg" height="25"></a>|
