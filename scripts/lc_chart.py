@@ -2,6 +2,7 @@ from lc_stats import stats_leetcode
 import lc_constants as lcc
 import matplotlib.pyplot as plt
 import numpy as np
+import pathlib as pl
 
 
 def chart_leetcode() -> None:
@@ -61,9 +62,11 @@ def chart_leetcode() -> None:
     axes.set_title("Number of LeetCode solutions by language and level")
     axes.legend()
 
-    chart_name = "lc_chart"
-    plt.savefig(chart_name)
-    print(f"[SUCCESS] Chart image '{chart_name}.png' generated (total number of solutions: {int(totals[-1])})")
+    script_path = pl.Path(__file__).resolve()
+    chart_path = script_path.parent.parent / ".github" / "lc_chart.png"
+
+    plt.savefig(chart_path)
+    print(f"[SUCCESS] Chart image generated in .github folder (total number of solutions: {int(totals[-1])})")
 
 
 if __name__ == "__main__":
