@@ -74,7 +74,7 @@ class Solution {
     char[] charT = t.toCharArray();
     Arrays.sort(charS);
     Arrays.sort(charT);
-    
+
     return Arrays.equals(charS, charT);
   }
 }

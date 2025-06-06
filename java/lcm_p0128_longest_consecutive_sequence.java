@@ -30,7 +30,7 @@ class Solution {
 
     Set<Integer> set = new HashSet<>();
     for (int num : nums) set.add(num);
-    
+
     for (int num : nums) {
 
       // process only starting numbers
@@ -44,10 +44,10 @@ class Solution {
         maxLength = Math.max(currLength, maxLength);
       }
     }
-    
+
     return maxLength;
   }
-  
+
   // Time Complexity: O(n log n) - 16 ms -> 91.59%
   // Space Complexity: O(1) - 56.8 MB -> 81.76%
   public int longestConsecutiveAlt(int[] nums) {
