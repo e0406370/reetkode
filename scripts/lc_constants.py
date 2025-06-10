@@ -1,6 +1,7 @@
 REETKODE_SOLUTION_URL = "{folder}/{filename}"
 REETKODE_ICON_URL = ".github/icons/{icon}"
 REETKODE_CHART_URL = ".github/lc_chart.png?"
+REETKODE_FLOW_URL = ".github/lc_flow.png?"
 LEETCODE_PROBLEM_URL = "https://lcid.cc/{id}"
 
 IGNORED_DIRS = (".git", ".github", "icons", "scripts")
