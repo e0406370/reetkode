@@ -106,8 +106,14 @@ def markdown_leetcode() -> None:
                              "This README is generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py), " +
                              "as part of an automated **GitHub Actions** [workflow](.github/workflows/main.yml) which runs during checks within pull requests made to the `main` branch, updating the README content and organising solution files prior to merging."
                             )
-        readme_file.new_line(text="***")
         readme_file.new_line()
+
+        flow_link_url = lcc.REETKODE_FLOW_URL
+        readme_file.new_line(text="The following diagram illustrates the action flow of using these [scripts](scripts/):")
+        readme_file.new_line()
+
+        readme_file.new_line(readme_file.new_inline_image(text="Script flow", path=flow_link_url))
+        readme_file.new_line(text="***")
 
         # data showing the number of LeetCode problems solved, grouped by difficulty level and programming language
         # key = programming language, value = mapping of each difficulty level to the number of problems solved

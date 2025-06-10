@@ -5,8 +5,11 @@ Reetkode
 My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference. 😃  
   
 This README is generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py), as part of an automated **GitHub Actions** [workflow](.github/workflows/main.yml) which runs during checks within pull requests made to the `main` branch, updating the README content and organising solution files prior to merging.  
-***  
   
+The following diagram illustrates the action flow of using these [scripts](scripts/):  
+  
+![Script flow](.github/lc_flow.png?)  
+***  
 ## Progress Overview  
 ![LeetCode stats](.github/lc_chart.png?)  
   
