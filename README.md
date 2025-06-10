@@ -4,7 +4,7 @@ Reetkode
   
 My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference. 😃  
   
-This README is generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py), as part of a **GitHub Actions** [workflow](.github/workflows/main.yml) which runs during checks within pull requests made to `main` branch, updating the content and organising solution files prior to merging.  
+This README is generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py), as part of an automated **GitHub Actions** [workflow](.github/workflows/main.yml) which runs during checks within pull requests made to the `main` branch, updating the README content and organising solution files prior to merging.  
 ***  
   
 ## Progress Overview  
@@ -252,3 +252,5 @@ This README is generated using the following custom-built **Python** scripts: [`
 |**3541**|🟩 Easy|⚙️|[Find Most Frequent Vowel And Consonant](https://lcid.cc/3541)|<a href="python/lce_p3541_find_most_frequent_vowel_and_consonant.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**3550**|🟩 Easy|⚙️|[Smallest Index With Digit Sum Equal To Index](https://lcid.cc/3550)|<a href="python/lce_p3550_smallest_index_with_digit_sum_equal_to_index.py"><img src=".github/icons/python-original.svg" height="25"></a>|
   
+  
+#### <div align="right"> [🔝Return to top](#reetkode) </div>
