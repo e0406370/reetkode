@@ -171,13 +171,13 @@ def markdown_leetcode() -> None:
             soln_type = soln_lst[0].type
             match soln_type:
                 case lcc.TYPE_ALGORITHM:
-                    soln_type = f"⚙️"
+                    soln_type = "⚙️"
 
                 case lcc.TYPE_DATABASE:
-                    soln_type = f"🛢️"
+                    soln_type = "🛢️"
 
                 case lcc.TYPE_SHELL:
-                    soln_type = f"📜"
+                    soln_type = "📜"
 
             cells.extend(
                 [
@@ -203,7 +203,7 @@ def markdown_leetcode() -> None:
 
 
     except Exception as e:
-        print(f"[ERROR] Failed to generate README")
+        print("[ERROR] Failed to generate README")
         print(f"=> {e}")
 
 

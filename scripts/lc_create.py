@@ -26,7 +26,7 @@ def create_leetcode(filetype: str, difficulty: str, title: str) -> None:
                 print(f"[SUCCESS] File created: '{name}'")
 
     except Exception as e:
-        print(f"[ERROR] Failed to create folder / file")
+        print("[ERROR] Failed to create folder / file")
         print(f"=> {e}")
         sys.exit(1)
 
