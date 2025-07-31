@@ -3,8 +3,7 @@ name: Auto-update README and move newly added solution files during PR checks
 on:
   pull_request:
     types: [opened, reopened, synchronize]
-    branches:
-      - "main"
+    branches: ["main"]
 
 env:
   GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
@@ -13,6 +12,9 @@ env:
 jobs:
   update_readme:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.13"]
 
     steps:
       - name: Checkout source branch of current PR
@@ -34,25 +36,17 @@ jobs:
             echo "should_skip=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Setup Python
+      - name: Install the latest version of uv
         if: steps.latest_commit.outputs.should_skip == 'false'
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.13.2"
+        uses: astral-sh/setup-uv@v6
 
-      - name: Cache pip dependencies
+      - name: Setup Python via uv
         if: steps.latest_commit.outputs.should_skip == 'false'
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('.github/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-            ${{ runner.os }}-
+        run: uv python install ${{ matrix.python-version }}
 
-      - name: Install pip dependencies
+      - name: Setup dependencies via uv
         if: steps.latest_commit.outputs.should_skip == 'false'
-        run: pip install -r ./.github/requirements.txt
+        run: uv sync --directory ./.github
 
       - name: Move solution files to their respective folders via lc_move.py
         if: steps.latest_commit.outputs.should_skip == 'false'
