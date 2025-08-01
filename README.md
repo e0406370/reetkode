@@ -1,18 +1,18 @@
 
 Reetkode
 ========
-  
-My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference. 😃  
-  
-This README is generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py), as part of an automated **GitHub Actions** [workflow](.github/workflows/main.yml) which runs during checks within pull requests made to the `main` branch, updating the README content and organising solution files prior to merging.  
-  
-The following diagram illustrates the action flow of using these [scripts](scripts/):  
-  
-![Script flow](.github/lc_flow.png?)  
-***  
-## Progress Overview  
-![LeetCode stats](.github/lc_chart.png?)  
-  
+
+My personal collection of [LeetCode](https://leetcode.com/) solutions done in multiple languages, shared for learning and reference.
+
+This README is generated using the following custom-built **Python** scripts: [`lc_markdown.py`](scripts/lc_markdown.py), [`lc_chart.py`](scripts/lc_chart.py), and [`lc_stats.py`](scripts/lc_stats.py), as part of an automated **GitHub Actions** [workflow](.github/workflows/update.yml) which runs during checks within pull requests made to the `main` branch, updating the README content and organising solution files prior to merging.
+
+The following diagram illustrates the action flow of using these [scripts](scripts/):
+
+![Script flow](.github/lc_flow.png?)
+***
+## Progress Overview
+![LeetCode stats](.github/lc_chart.png?)
+
 ## Solutions Directory
 |ID|Difficulty|Type|Title|Solutions|
 | :--- | :--- | :--- | :--- | :--- |
@@ -46,6 +46,7 @@ The following diagram illustrates the action flow of using these [scripts](scrip
 |**196**|🟩 Easy|🛢️|[Delete Duplicate Emails](https://lcid.cc/196)|<a href="sql/lce_p0196_delete_duplicate_emails_postgresql.sql"><img src=".github/icons/postgresql-original.svg" height="25"></a> <a href="sql/lce_p0196_delete_duplicate_emails_sqlserver.sql"><img src=".github/icons/sqlserver-original.svg" height="25"></a>|
 |**197**|🟩 Easy|🛢️|[Rising Temperature](https://lcid.cc/197)|<a href="sql/lce_p0197_rising_temperature_mysql.sql"><img src=".github/icons/mysql-original.svg" height="25"></a> <a href="sql/lce_p0197_rising_temperature_postgresql.sql"><img src=".github/icons/postgresql-original.svg" height="25"></a>|
 |**217**|🟩 Easy|⚙️|[Contains Duplicate](https://lcid.cc/217)|<a href="java/lce_p0217_contains_duplicate.java"><img src=".github/icons/java-original.svg" height="25"></a>|
+|**230**|🟨 Medium|⚙️|[Kth Smallest Element In A Bst](https://lcid.cc/230)|<a href="python/lcm_p0230_kth_smallest_element_in_a_bst.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**238**|🟨 Medium|⚙️|[Product Of Array Except Self](https://lcid.cc/238)|<a href="java/lcm_p0238_product_of_array_except_self.java"><img src=".github/icons/java-original.svg" height="25"></a> <a href="python/lcm_p0238_product_of_array_except_self.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**242**|🟩 Easy|⚙️|[Valid Anagram](https://lcid.cc/242)|<a href="java/lce_p0242_valid_anagram.java"><img src=".github/icons/java-original.svg" height="25"></a> <a href="python/lce_p0242_valid_anagram.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**271**|🟨 Medium|⚙️|[Encode And Decode Strings](https://lcid.cc/271)|<a href="java/lcm_p0271_encode_and_decode_strings.java"><img src=".github/icons/java-original.svg" height="25"></a>|
@@ -53,6 +54,7 @@ The following diagram illustrates the action flow of using these [scripts](scrip
 |**334**|🟨 Medium|⚙️|[Increasing Triplet Subsequence](https://lcid.cc/334)|<a href="python/lcm_p0334_increasing_triplet_subsequence.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**345**|🟩 Easy|⚙️|[Reverse Vowels Of A String](https://lcid.cc/345)|<a href="python/lce_p0345_reverse_vowels_of_a_string.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**347**|🟨 Medium|⚙️|[Top K Frequent Elements](https://lcid.cc/347)|<a href="java/lcm_p0347_top_k_frequent_elements.java"><img src=".github/icons/java-original.svg" height="25"></a>|
+|**366**|🟨 Medium|⚙️|[Find Leaves Of Binary Tree](https://lcid.cc/366)|<a href="python/lcm_p0366_find_leaves_of_binary_tree.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**387**|🟩 Easy|⚙️|[First Unique Character String](https://lcid.cc/387)|<a href="python/lce_p0387_first_unique_character_string.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**389**|🟩 Easy|⚙️|[Find The Difference](https://lcid.cc/389)|<a href="python/lce_p0389_find_the_difference.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**392**|🟩 Easy|⚙️|[Is Subsequence](https://lcid.cc/392)|<a href="python/lce_p0392_is_subsequence.py"><img src=".github/icons/python-original.svg" height="25"></a>|
@@ -112,6 +114,7 @@ The following diagram illustrates the action flow of using these [scripts](scrip
 |**1211**|🟩 Easy|🛢️|[Queries Quality And Percentage](https://lcid.cc/1211)|<a href="sql/lce_p1211_queries_quality_and_percentage_mysql.sql"><img src=".github/icons/mysql-original.svg" height="25"></a>|
 |**1232**|🟩 Easy|⚙️|[Check If It Is A Straight Line](https://lcid.cc/1232)|<a href="python/lce_p1232_check_if_it_is_a_straight_line.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**1251**|🟩 Easy|🛢️|[Average Selling Price](https://lcid.cc/1251)|<a href="sql/lce_p1251_average_selling_price_mysql.sql"><img src=".github/icons/mysql-original.svg" height="25"></a>|
+|**1255**|🟥 Hard|⚙️|[Maximum Score Words Formed By Letters](https://lcid.cc/1255)|<a href="python/lch_p1255_maximum_score_words_formed_by_letters.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**1280**|🟩 Easy|🛢️|[Students And Examinations](https://lcid.cc/1280)|<a href="sql/lce_p1280_students_and_examinations_mysql.sql"><img src=".github/icons/mysql-original.svg" height="25"></a>|
 |**1321**|🟨 Medium|🛢️|[Restaurant Growth](https://lcid.cc/1321)|<a href="sql/lcm_p1321_restaurant_growth_mysql.sql"><img src=".github/icons/mysql-original.svg" height="25"></a>|
 |**1327**|🟩 Easy|🛢️|[List The Products Ordered In A Period](https://lcid.cc/1327)|<a href="sql/lce_p1327_list_the_products_ordered_in_a_period_mysql.sql"><img src=".github/icons/mysql-original.svg" height="25"></a>|
@@ -175,6 +178,7 @@ The following diagram illustrates the action flow of using these [scripts](scrip
 |**1978**|🟩 Easy|🛢️|[Employees Whose Manager Left The Company](https://lcid.cc/1978)|<a href="sql/lce_p1978_employees_whose_manager_left_the_company_sqlserver.sql"><img src=".github/icons/sqlserver-original.svg" height="25"></a>|
 |**1995**|🟩 Easy|⚙️|[Count Special Quadruplets](https://lcid.cc/1995)|<a href="python/lce_p1995_count_special_quadruplets.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**2042**|🟩 Easy|⚙️|[Check If Numbers Are Ascending In A Sentence](https://lcid.cc/2042)|<a href="python/lce_p2042_check_if_numbers_are_ascending_in_a_sentence.py"><img src=".github/icons/python-original.svg" height="25"></a>|
+|**2044**|🟨 Medium|⚙️|[Count Number Of Maximum Bitwise-or Subsets](https://lcid.cc/2044)|<a href="python/lcm_p2044_count_number_of_maximum_bitwise-or_subsets.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**2073**|🟩 Easy|⚙️|[Time Needed To Buy Tickets](https://lcid.cc/2073)|<a href="python/lce_p2073_time_needed_to_buy_tickets.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**2109**|🟨 Medium|⚙️|[Adding Spaces To A String](https://lcid.cc/2109)|<a href="java/lcm_p2109_adding_spaces_to_a_string.java"><img src=".github/icons/java-original.svg" height="25"></a>|
 |**2124**|🟩 Easy|⚙️|[Check If All As Appears Before All Bs](https://lcid.cc/2124)|<a href="python/lce_p2124_check_if_all_as_appears_before_all_bs.py"><img src=".github/icons/python-original.svg" height="25"></a>|
@@ -234,6 +238,7 @@ The following diagram illustrates the action flow of using these [scripts](scrip
 |**3163**|🟨 Medium|⚙️|[String Compression III](https://lcid.cc/3163)|<a href="java/lcm_p3163_string_compression_iii.java"><img src=".github/icons/java-original.svg" height="25"></a>|
 |**3173**|🟩 Easy|⚙️|[Bitwise Or Of Adjacent Elements](https://lcid.cc/3173)|<a href="python/lce_p3173_bitwise_or_of_adjacent_elements.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**3174**|🟩 Easy|⚙️|[Clear Digits](https://lcid.cc/3174)|<a href="python/lce_p3174_clear_digits.py"><img src=".github/icons/python-original.svg" height="25"></a>|
+|**3211**|🟨 Medium|⚙️|[Generate Binary Strings Without Adjacent Zeros](https://lcid.cc/3211)|<a href="python/lcm_p3211_generate_binary_strings_without_adjacent_zeros.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**3220**|🟨 Medium|🛢️|[Odd And Even Transactions](https://lcid.cc/3220)|<a href="sql/lcm_p3220_odd_and_even_transactions_mysql.sql"><img src=".github/icons/mysql-original.svg" height="25"></a>|
 |**3223**|🟨 Medium|⚙️|[Minimum Length Of String After Operations](https://lcid.cc/3223)|<a href="python/lcm_p3223_minimum_length_of_string_after_operations.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**3300**|🟩 Easy|⚙️|[Minimum Element After Replacement With Digit Sum](https://lcid.cc/3300)|<a href="python/lce_p3300_minimum_element_after_replacement_with_digit_sum.py"><img src=".github/icons/python-original.svg" height="25"></a>|
@@ -254,6 +259,8 @@ The following diagram illustrates the action flow of using these [scripts](scrip
 |**3536**|🟩 Easy|⚙️|[Maximum Product Of Two Digits](https://lcid.cc/3536)|<a href="python/lce_p3536_maximum_product_of_two_digits.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**3541**|🟩 Easy|⚙️|[Find Most Frequent Vowel And Consonant](https://lcid.cc/3541)|<a href="python/lce_p3541_find_most_frequent_vowel_and_consonant.py"><img src=".github/icons/python-original.svg" height="25"></a>|
 |**3550**|🟩 Easy|⚙️|[Smallest Index With Digit Sum Equal To Index](https://lcid.cc/3550)|<a href="python/lce_p3550_smallest_index_with_digit_sum_equal_to_index.py"><img src=".github/icons/python-original.svg" height="25"></a>|
-  
-  
+|**3616**|🟨 Medium|⚙️|[Number Of Student Replacements](https://lcid.cc/3616)|<a href="python/lcm_p3616_number_of_student_replacements.py"><img src=".github/icons/python-original.svg" height="25"></a>|
+|**3631**|🟨 Medium|⚙️|[Sort Threats By Severity And Exploitability](https://lcid.cc/3631)|<a href="python/lcm_p3631_sort_threats_by_severity_and_exploitability.py"><img src=".github/icons/python-original.svg" height="25"></a>|
+
+
 #### <div align="right"> [🔝Return to top](#reetkode) </div>

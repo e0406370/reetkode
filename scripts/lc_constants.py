@@ -4,7 +4,7 @@ REETKODE_CHART_URL = ".github/lc_chart.png?"
 REETKODE_FLOW_URL = ".github/lc_flow.png?"
 LEETCODE_PROBLEM_URL = "https://lcid.cc/{id}"
 
-IGNORED_DIRS = (".git", ".github", "icons", "scripts")
+IGNORED_DIRS = (".venv", ".git", ".github", "icons", "scripts")
 ACCEPTED_FILETYPES_MAP = {
     ".c": "c",
     ".cpp": "cpp",

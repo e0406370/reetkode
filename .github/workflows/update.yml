@@ -46,22 +46,20 @@ jobs:
 
       - name: Setup dependencies via uv
         if: steps.latest_commit.outputs.should_skip == 'false'
-        run: uv sync --directory ./.github
+        run: uv sync
 
       - name: Move solution files to their respective folders via lc_move.py
         if: steps.latest_commit.outputs.should_skip == 'false'
         id: move_step
         run: |
-          export PYTHONPATH=$GITHUB_WORKSPACE
-          python ./scripts/lc_move.py | tee output.log
+          uv run python -B ./scripts/lc_move.py | tee output.log
           echo "files_moved=$(grep '\[END\]' output.log | grep -o '[0-9]\+')" >> $GITHUB_OUTPUT
           rm output.log
 
       - name: Update progress chart and README via lc_markdown.py
         if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
         run: |
-          export PYTHONPATH=$GITHUB_WORKSPACE
-          python ./scripts/lc_markdown.py
+          uv run python -B ./scripts/lc_markdown.py
 
       - name: Check for changed files
         if: steps.latest_commit.outputs.should_skip == 'false' && steps.move_step.outputs.files_moved != '0'
@@ -77,7 +75,7 @@ jobs:
           if ! git diff --cached --quiet; then
             git config user.name $GIT_USERNAME
             git config user.email $GIT_EMAIL
-            git commit -m "[auto] Update README and move solution files (R.N: ${{ github.run_number }})" \
+            git commit -m "[auto] update README and move solution files (R.N: ${{ github.run_number }})" \
                       -m "Push commit: ${{ github.sha }} " \
                       -m "Files moved: ${{ steps.move_step.outputs.files_moved }}" \
                       -m "Workflow: ${{ github.workflow }}" \
